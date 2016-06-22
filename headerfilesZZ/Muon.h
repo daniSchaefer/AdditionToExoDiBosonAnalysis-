@@ -11,7 +11,7 @@ private:
   Int_t hlt_nTrigs_;
   vector<bool> *hlt_trigResult_;
   vector<string> * hlt_trigName_;
-  const char* trigger_ ="HLT_Mu45";
+  const char* trigger_ = "HLT_Mu45_eta2p1";//"HLT_Mu45";
   Double_t miniIso_;
   
   bool isHighPtMuon_;

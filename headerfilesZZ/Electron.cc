@@ -46,6 +46,8 @@ void Electron::Init(int index, ZZtree* tree)
   HoverE_      = tree->eleHoverE->at(index);
   isHEEPNoIso_ = tree->eleIsPassHEEPNoIso->at(index);
   isHEEP_      = tree->eleIsPassHEEP->at(index);
+  isLoose_     = tree->eleIsPassLoose->at(index);
+  isLooseNoIso_ = tree->eleIsPassLooseNoIso->at(index);
   SuperClusterEta_ = tree->eleScEta->at(index);
 
   }
@@ -65,6 +67,8 @@ void Electron::Set_miniIso(Double_t iso){miniIso_ = iso;}
 void Electron::Set_HoverE(Double_t HoverE){HoverE_ = HoverE;}
 void Electron::Set_HEEPNoIso(bool isHEEP){isHEEPNoIso_ = isHEEP;}
 void Electron::Set_HEEP(bool isHEEP){isHEEP_ = isHEEP;}
+void Electron::Set_LooseNoIso(bool isTrue){isLooseNoIso_ = isTrue;}
+void Electron::Set_Loose(bool isTrue){isLoose_ = isTrue;}
 void Electron::Set_SuperClusterEta(Double_t eta){SuperClusterEta_ = eta;}
   
 const char* Electron::Get_Trigger() const{return trigger_;}
@@ -73,12 +77,15 @@ Double_t Electron::Get_miniIso() const {return miniIso_;}
 Double_t Electron::Get_HoverE() const {return HoverE_;}
 bool Electron::Get_HEEPNoIso() const {return isHEEPNoIso_;}
 bool Electron::Get_HEEP() const {return isHEEP_;}
+bool Electron::Get_LooseNoIso() const {return isLooseNoIso_;}
+bool Electron::Get_Loose() const {return isLoose_;}
 Double_t Electron::Get_SuperClusterEta() const {return SuperClusterEta_;}
  
  int Electron::passedID()
  {
    int isPassed =0;
-   if(isHEEPNoIso_) {isPassed = 1;}
+   //if(isHEEPNoIso_) {isPassed = 1;}
+   if(Get_LooseNoIso()){isPassed =1;}
    return isPassed;
  }
  
