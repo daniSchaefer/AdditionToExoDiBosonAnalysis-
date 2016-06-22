@@ -7,8 +7,10 @@ void WEfficiencyGetMCEffperSample(int pdgId,const char* input_filename,ofstream 
 
 //writes Histo containing the m_VV spektrum of reconstructed events in:
 // results/modelName/ModelName_M-**_width0p*.root
-void makeRootFileForCheckFitCBBW(string ModelName,string channel,string category,float mass, float width, bool matchV =0,bool getGeneratedKinematics =0,bool getGeneratedKinematicsWithoutSelection =0);
+void makeRootFileForCheckFitCBBW(string ModelName,string channel,string category,string decayMode,float mass, float width, bool matchV =0,bool getGeneratedKinematics =0,bool getGeneratedKinematicsWithoutSelection =0);
 
+//return 1 of Delta R(W,jet) <1.0
+bool isMatched(TLorentzVector W, TLorentzVector jet);
 
 //returns 1 if the difference of W_had_gen and W_had_rec is approximatly zero
 //bool isW/isZ controlls which region in m_jet_prunde is taken to reconstruct the isMatchedJet
@@ -18,23 +20,29 @@ void makeRootFileForCheckFitCBBW(string ModelName,string channel,string category
 //0/0 no cut
 bool isMatchedJet(MyClass* t12, bool isW, bool isZ);
 
+//returns 1 if in the all hadronic channel both reconstructed jets are matched to the generated bosons
+bool hasMatchedJetsAllHad(MyClass*t12);
+
 //writes mVV histo to file with full leptonic selections applied, but instead 
 //of the hadronic selections, a matching of genereted  W and jet is performed
 //to check if the pruned mass cuts are responsible for moving the mean value in mVV histo
 void makeRootFileForCheckFitCBBW_matching_withoutSelection(string ModelName,string channel,float mass, float width);
 
-void makeRootFileForCheckFitCBBW_recMC_matched(string ModelName,string channel,string category,float mass, float width,int numberFiles);
+void makeRootFileForCheckFitCBBW_recMC_matched(string ModelName,string channel,string category,string decayMode,float mass, float width,int numberFiles);
 
-void makeRootFileForCheckFitCBBW_genMC_withSelection(string ModelName,string channel,string category,float mass, float width);
+void makeRootFileForCheckFitCBBW_genMC_withSelection(string ModelName,string channel,string category,string decayMode,float mass, float width);
 
-void makeRootFileForCheckFitCBBW_genMC_withoutSelection(string ModelName,string channel,string category,float mass, float width);
+void makeRootFileForCheckFitCBBW_genMC_withoutSelection(string ModelName,string channel,string category,string decayMode,float mass, float width);
 
 //writes to file with name: ModelNameToWKinematicschannel_EffReweightedHisto.root
 //writes 2D histos with W_lep/W_had generated Pt and Eta, where each event is weighted accordingly with the Efficiencies from hadronEff, leptonEff, BVEff and LLVEff
 //return the BV and LLV efficiency from the selections on the file
 vector<double> testEfficiency(string ModelName, string channel,string category,MyClass* t12 ,string outputFile,vector<vector<double> > hadronEff,vector<vector<double> > leptonEff, double BVEff, double LLVEff,double scale);
 
+//does the same as function above only for the all hadronic channel
+void testEfficiencyAllHad(string ModelName,string channel, string category, MyClass* t12, string outputFile, vector<vector<double> > effJET1,/*vector<vector<double> > effJET2,*/float scale);
 //returns the total number of events in file
-double NumberOfEventsInFile(string ModelName,float mass,float width);
+double NumberOfEventsInFile(string ModelName,string decayMode,float mass,float width);
 
+void testEfficiencyAllHadTEST(string ModelName,string channel, string category, MyClass* t12, string outputFile, vector<vector<double> > effW , vector<vector<double> > effZ ,float scale);
 #endif

@@ -7,77 +7,138 @@
 #include "TH1.h"
 #include "TH2.h"
 #include "TEfficiency.h"
+#include "TCanvas.h"
 
-string getFileName(string directory, string ModelName,float mass,float width, int number,bool isInJbod)
+string getFileName(string directory, string ModelName,string decayMode,float mass,float width, int number)
 {
   string Smass = std::to_string(int(mass));
   string Swidth = std::to_string(int(width*10));
   string Snumber = std::to_string(number);
   
-  string SfileName = "";
+  string SfileName = "had no name yet";
+  string VV = "WW";
+  string Vlep ="W";
+  string Vhad ="W";
   
-  if(ModelName.find("Wprime") !=string::npos)
+  if(decayMode.find("ll")!=string::npos)
+  {
+    Vlep = "Z";
+  }
+  
+  if(decayMode.find("ZZ")!=string::npos)
+  {
+    VV="ZZ";
+    Vhad="Z";
+  }
+  if(decayMode.find("WZ")!=string::npos or ModelName.find("Wprime")!=string::npos)
+  {
+   VV="WZ";
+   if(decayMode.find("lv")!=string::npos)
+   {
+   Vhad="Z";
+   }
+  }
+  
+  if(decayMode.find("lvjj")!=string::npos)
   {
     if(width==0.0)
     {
-   SfileName =directory+ModelName+"ToWZToWlepZhad_narrow_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWZToWlepZhad_narrow_M-"+Smass+"_"+Snumber+".root";
+    SfileName =directory+ModelName+"To"+VV+"To"+Vlep+"lep"+Vhad+"had_narrow_M-"+Smass+"/EXOVVTree_"+ModelName+"To"+VV+"To"+Vlep+"lep"+Vhad+"had_narrow_M-"+Smass+"_"+Snumber+".root";
     }
     else
     {
-      if(isInJbod)
+       SfileName =directory+ModelName+"To"+VV+"To"+Vlep+"lep"+Vhad+"had_width0p"+Swidth+"_M-"+Smass+"/EXOVVTree_"+ModelName+"To"+VV+"To"+Vlep+"lep"+Vhad+"had_width0p"+Swidth+"_M-"+Smass+"_"+Snumber+".root";
+    }
+  }
+  else if(decayMode.find("lljj") !=string::npos)
+  {
+    //naming not clear yet! (ZZ channel)
+  }
+  
+  else if(decayMode.find("jjjj") !=string::npos)
+  {
+    if(width==0.0)
+    {
+      SfileName = directory+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/EXOVVTree_"+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1_"+Snumber+".root";
+      ifstream f(SfileName.c_str());
+      if(!(f.good()))
       {
-      SfileName =directory+ModelName+"ToWZToWlepZhad_width0p"+Swidth+"_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWZToWlepZhad_width0p"+Swidth+"_M-"+Smass+"_"+Snumber+".root";
-      }
-      else
+	SfileName = directory+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/EXOVVTree_"+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v2_"+Snumber+".root";
+	f.close();
+      f.open(SfileName.c_str());
+      if(!f.good())
       {
-	 SfileName =directory+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"_"+Snumber+".root";
+	SfileName = directory+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/EXOVVTree_"+ModelName+"To"+VV+"_narrow_M-"+Smass+"_13TeV-madgraph_RunIIFall15MiniAODv1_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1_"+Snumber+".root";
       }
-    }
-  }
-    if(ModelName.find("Radion") != string::npos /*or ModelName.find("Zprime") != string::npos*/ or ModelName.find("RSGrav") != string::npos )
-  {
-    if(width==0.0)
-    {
-      std::cout << " no narrow width sample exists" <<std::endl;
-  
+      }
+      f.close();
     }
     else
     {
-      SfileName =directory+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"_"+Snumber+".root";
+      SfileName = directory+ModelName+"To"+VV+"_width0p"+Swidth+"_M-"+Smass+"_TuneCUETP8M1_13TeV-madgraph-pythia8_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/EXOVVTree_"+ModelName+"To"+VV+"_width0p"+Swidth+"_M-"+Smass+"_TuneCUETP8M1_13TeV-madgraph-pythia8_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1_"+Snumber+".root";
+      ifstream f(SfileName.c_str());
+      if(!(f.good()))
+      {
+	SfileName = directory+ModelName+"To"+VV+"_width0p"+Swidth+"_M-"+Smass+"_TuneCUETP8M1_13TeV-madgraph-pythia8_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/EXOVVTree_"+ModelName+"To"+VV+"_width0p"+Swidth+"_M-"+Smass+"_TuneCUETP8M1_13TeV-madgraph-pythia8_RunIIFall15MiniAODv2_PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v2_"+Snumber+".root";
+	
+      }
+      f.close();
     }
   }
-     if(ModelName.find("BulkGrav") != string::npos)
+  else
   {
-    if(width==0.0)
-    {
-      
-   SfileName =directory+ModelName+"ToWWToWlepWhad_narrow_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWWToWlepWhad_narrow_M-"+Smass+"_1.root";
-    }
-    else
-    {
-      std::cout << " no width sample exists" <<std::endl;
-    }
+   std::cout << " no valid decayMode given " << decayMode <<std::endl;
   }
   
-   if(ModelName.find("Zprime") != string::npos)
-  {
-    if(width==0.0)
-    {
-      
-   SfileName =directory+ModelName+"ToWWToWlepWhad_narrow_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWWToWlepWhad_narrow_M-"+Smass+"_1.root";
-    }
-    else
-    {
-      SfileName =directory+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"/EXOVVTree_"+ModelName+"ToWWToWlepWhad_width0p"+Swidth+"_M-"+Smass+"_"+Snumber+".root";
-    }
-  }
-    //const char* fileName = SfileName.c_str();
-    return SfileName;
-    
+  
+  return SfileName;  
 }
 
 //=================================================================================================
+string determineVV(string decayMode)
+{
+  string VV = "WW";
+  if(decayMode.find("ZZ")!=string::npos)
+   {
+    VV="ZZ"; 
+   }
+   if(decayMode.find("W")!=string::npos and decayMode.find("Z")!=string::npos)
+   {
+      VV="WZ";
+   }
+   return VV;
+}
+//=================================================================================================
 
+string determineSemilepHadOrLep(string decayMode)
+{
+  string mode = "hadronic";
+   if((decayMode.find("lv")!=string::npos or decayMode.find("ll")!=string::npos) and decayMode.find("jj")!=string::npos)
+   {
+    mode = "semileptonic"; 
+   }
+   if((decayMode.find("lvlv")!=string::npos or decayMode.find("llll")!=string::npos))
+   {
+    mode = "leptonic"; 
+   }
+  return mode;
+}
+//============================================================================================
+
+string determineFileName(string WhichRootFile,string modelName, string channel, string category, string decayMode)
+{
+  string VV = determineVV(decayMode);
+  string mode = determineSemilepHadOrLep(decayMode);
+  string result;
+  
+ if(WhichRootFile.find("EfficiencyHistos")!=string::npos)
+ {
+   result = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+modelName+"To"+VV+"Kinematics_"+channel+"_"+category+".root";
+   
+ }
+  
+  return result;
+}
 
 //================================================================================================
 
@@ -202,7 +263,30 @@ void setErrors(TH2* histo, TEfficiency* Eff)
 //==================================================================================================
 
 
+void prepareCanvas(TCanvas* canv, int W, int H)
+{
+  int H_ref = H; 
+  int W_ref = W; 
+  
+  float T = 0.08*H_ref;
+  float B = 0.12*H_ref; 
+  float L = 0.12*W_ref;
+  float R = 0.04*W_ref;
 
+  canv->SetFillColor(0);
+  canv->SetBorderMode(0);
+  canv->SetFrameFillStyle(0);
+  canv->SetFrameBorderMode(0);
+  canv->SetLeftMargin( L/W );
+  canv->SetRightMargin( R/W );
+  canv->SetTopMargin( T/H );
+  canv->SetBottomMargin( B/H );
+  canv->SetTickx(0);
+  canv->SetTicky(0);
+  
+  //return canv;
+  
+}
 
 
 

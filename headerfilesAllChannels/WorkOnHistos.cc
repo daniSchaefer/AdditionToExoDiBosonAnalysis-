@@ -183,13 +183,14 @@ vector<double> SumOverAllFilledBins(TH2* histo,int nBinsX,int nBinsY)
    for(int x=0;x<=(nBinsX-1); x++)
     {
       int BinNumber= histo->GetBin(x,y);
-      if(histo->GetBinContent(BinNumber)>0)
-      {
+      //std::cout << histo->GetBinContent(BinNumber) <<std::endl;
+      if((histo->GetBinContent(BinNumber))==0)
+      continue;
       sum +=histo->GetBinContent(BinNumber);
       NumberBins+=1;
-      }
     }
  }
+ //std::cout << sum <<std::endl;
  result.push_back(NumberBins);
  result.push_back(sum);
  return result;
@@ -386,10 +387,29 @@ TH2F* GenerateAllTables(TH2F* hWEl_rec,TH2F* hWEl_genWithVeto,TH2F* hWEl_2TeV, T
 
 //============================================================================================
 
+void SetBinsWithContentSmaller10EntriesToZero(TH2* passedHisto)
+{
+  int nbinsx = passedHisto->GetNbinsX();
+  int nbinsy = passedHisto->GetNbinsY();
+  for(int x=0;x<nbinsx;x++)
+  {
+   for(int y=0;y<nbinsy;y++)
+   {
+    int bin = passedHisto->GetBin(x,y);
+    if(passedHisto->GetBinContent(bin)<10)
+    {
+     passedHisto->SetBinContent(bin,0); 
+    }
+   }
+  }
+}
+
+//============================================================================================
 TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo, TCanvas* c1)
 {
   TEfficiency* Eff=0;
   TH2* hEff=0;
+  //SetBinsWithContentSmaller10EntriesToZero(passedHisto);
   if(TEfficiency::CheckConsistency(*passedHisto,*Histo))
  {
    Eff=new TEfficiency(*passedHisto,*Histo);
@@ -409,6 +429,7 @@ TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo, TCanvas* c1,const char* zAxis
 {
   TEfficiency* Eff=0;
   TH2* hEff=0;
+ // SetBinsWithContentSmaller10EntriesToZero(passedHisto);
   if(TEfficiency::CheckConsistency(*passedHisto,*Histo))
  {
    Eff=new TEfficiency(*passedHisto,*Histo);
@@ -428,6 +449,7 @@ TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo, TCanvas* c1, float max)
 {
   TEfficiency* Eff=0;
   TH2* hEff=0;
+ // SetBinsWithContentSmaller10EntriesToZero(passedHisto);
   if(TEfficiency::CheckConsistency(*passedHisto,*Histo))
  {
    Eff=new TEfficiency(*passedHisto,*Histo);
@@ -448,6 +470,8 @@ TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo)
 {
   TEfficiency* Eff=0;
   TH2* hEff=0;
+  
+  //SetBinsWithContentSmaller10EntriesToZero(passedHisto);
   if(TEfficiency::CheckConsistency(*passedHisto,*Histo))
  {
    Eff=new TEfficiency(*passedHisto,*Histo);
@@ -464,6 +488,7 @@ TH2* GetEfficienciesWithError(TH2* passedHisto, TH2* Histo,int nBinsX,int nBinsY
 {
   TEfficiency* Eff=0;
   TH2* hEff=0;
+  //SetBinsWithContentSmaller10EntriesToZero(passedHisto);
   if(TEfficiency::CheckConsistency(*passedHisto,*Histo))
  {
    Eff=new TEfficiency(*passedHisto,*Histo);
@@ -519,8 +544,10 @@ TH2* GetRatioHisto(TH2* histo1, TH2* histo2,int nBinsX, int nBinsY)
 //====================================================================================
 
 
-void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* channel,const char * additional_channel,int xPosition)
+void SetStyleEffPlots(TH2* histo,TPad* c1,const char* title, const char* channel,const char * additional_channel,int xPosition)
 {
+  
+  
   
   c1->cd();
   gPad->SetRightMargin(0.15);
@@ -534,18 +561,34 @@ void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* chan
   {
     style2D(histo,"Generator p_{t}^{W} [GeV]","Generator |#eta_{W}|","Reconstruction #times ID efficiency");
   }
-  histo->SetTitle(title);
+  //histo->SetTitle(title);
   histo->SetMaximum(1);
   histo->SetMinimum(0);
   histo->Draw("COLZ");
   TLatex text;
   text.SetTextFont(43); 
   text.SetTextSize(16);
-  text.DrawLatex(xPosition, 2.3, channel);
-  text.DrawLatex(xPosition, 2.1, additional_channel); 
+  text.DrawLatex(xPosition, 2.28, channel);
+  text.DrawLatex(xPosition, 2.1, additional_channel);
+  TLatex CMS;
+   CMS.SetTextFont(43);
+   CMS.SetTextSize(18);
+   string cms = "#font[62]{CMS} #font[52]{"+string(title)+"} ";
+   string lumi = "#sqrt{s}=13 TeV";
+   CMS.DrawLatex(50,2.52,cms.c_str());
+   CMS.DrawLatex(2900,2.52,lumi.c_str());
+//   TLatex ltitle;
+//   ltitle.SetTextFont(52);
+//   ltitle.SetTextSize(14);
+//   ltitle.DrawLatex(0+1000,2.5,title);
+//   TLatex lumi;
+//   lumi.SetTextFont(52);
+//   lumi.SetTextSize(14);
+//   lumi.DrawLatex(4000,2.5,"2.1 fb^{-1}");
+  
 }
 
-void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* channel,const char * additional_channel,int xPosition, const char* zAxisTitle)
+void SetStyleEffPlots(TH2* histo,TPad* c1,const char* title, const char* channel,const char * additional_channel,int xPosition, const char* zAxisTitle)
 {
   
   c1->cd();
@@ -571,3 +614,41 @@ void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* chan
   text.DrawLatex(xPosition, 2.1, additional_channel); 
 }
 
+void SetStyleEffPlotsAllHad(TH2* histo,TPad* c1,const char* title, const char* channel,int xPosition)
+{
+  c1->cd();
+  gPad->SetRightMargin(0.15);
+  gPad->SetLeftMargin(0.13);
+  string st= string(channel);
+  if(st.find("WZ")!= string::npos)
+  {
+    style2D(histo,"Generator p_{t}^{Z}+p_{t}^{W} [GeV]","Generator |#eta_{Z} - #eta_{W}|","Reconstruction #times ID efficiency");
+  }
+  else if(st.find("ZZ")!= string::npos)
+  {
+    style2D(histo,"Generator p_{t}^{Z_{1}}+p_{t}^{Z_{2}} [GeV]","Generator |#eta_{Z_{1}} - #eta_{Z_{2}}|","Reconstruction #times ID efficiency");
+  }
+  else if(st.find("WW")!= string::npos)
+  {
+   style2D(histo,"Generator p_{t}^{W_{1}}+p_{t}^{W_{2}} [GeV]","Generator |#eta_{W_{1}} - #eta_{W_{2}}|","Reconstruction #times ID efficiency"); 
+  }
+  //histo->SetTitle(title);
+  histo->SetMaximum(1);
+  histo->SetMinimum(0);
+  histo->Draw("COLZ");
+  TLatex text;
+  text.SetTextFont(43); 
+  text.SetTextSize(16);
+  //text.SetTextColor(0);
+  text.DrawLatex(xPosition, 2.1, channel);
+  //text.DrawLatex(xPosition, 2.1, additional_channel);
+  TLatex CMS;
+   CMS.SetTextFont(43);
+   CMS.SetTextSize(18);
+   string cms = "#font[62]{CMS} #font[52]{"+string(title)+"} ";
+   string lumi = "#sqrt{s}=13 TeV";
+   CMS.DrawLatex(50,2.42,cms.c_str());
+   CMS.DrawLatex(2900,2.42,lumi.c_str());
+
+  
+}

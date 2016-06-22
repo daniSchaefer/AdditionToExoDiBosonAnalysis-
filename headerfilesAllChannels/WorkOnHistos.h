@@ -51,12 +51,14 @@ TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo, TCanvas* c1,const char* zAxis
 TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo, TCanvas* c1, float max);
 TH2* GetEfficiencies(TH2* passedHisto, TH2* Histo);
 TH2* GetEfficienciesWithError(TH2* passedHisto, TH2* Histo,int nBinsX,int  nBinsY);
+void SetBinsWithContentSmaller10EntriesToZero(TH2* passedHisto);
+
 
 //return the ratio of (sum over all filled Bins histo1)/(sum over all filled bins histo2)
 double GetRatio(TH2* histo1, TH2* histo2,int nBinsX, int nBinsY);
 
 
-void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* channel,const char * additional_channel= " ",int xPosition = 2000);
-void SetStyleEffPlots(TH2* histo,TCanvas* c1,const char* title, const char* channel,const char * additional_channel,int xPosition, const char* zAxisTitle);
-
+void SetStyleEffPlots(TH2* histo,TPad* c1,const char* title, const char* channel,const char * additional_channel= " ",int xPosition = 2000);
+void SetStyleEffPlots(TH2* histo,TPad* c1,const char* title, const char* channel,const char * additional_channel,int xPosition, const char* zAxisTitle);
+void SetStyleEffPlotsAllHad(TH2* histo,TPad* c1,const char* title, const char* channel,int xPosition = 2000);
 #endif
