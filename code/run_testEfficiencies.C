@@ -23,10 +23,12 @@
 #include "/usr/users/dschaefer/root/headerfiles/RecFunc.h"
 #include "/usr/users/dschaefer/root/headerfiles/StyleFunc.h"
 #include "/usr/users/dschaefer/root/headerfiles/DebugFunc.h"
+#include "/usr/users/dschaefer/root/headerfiles/DebugFunc2.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/General.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/WorkOnHistos.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/Efficiencies.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/Efficiencies2.h"
+//#include "/usr/users/dschaefer/root/headerfilesZZ/ZZtree.h"
 
 using namespace std;
 
@@ -38,17 +40,19 @@ namespace{
   int loadMyLibraryTriggerFunc(){
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesAllChannels/General.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/MyClass.C+");
+ //gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesZZ/ZZtree.C+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/StyleFunc.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesAllChannels/WorkOnHistos.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/Op.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/EventSelection.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/GenFunc.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/RecFunc.cc+");
-  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/passed_mu_jes.C+");
+ gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/passed_mu_jes.C+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/DebugFunc.cc+");
+ gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfiles/DebugFunc2.cc+");
  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesAllChannels/Efficiencies.cc+");
-  gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesAllChannels/Efficiencies2.cc+");
-
+ gROOT->ProcessLine(".L /usr/users/dschaefer/root/headerfilesAllChannels/Efficiencies2.cc+");
+  
 
 
  
@@ -57,36 +61,48 @@ namespace{
   int loadMyLibraryTrigger = loadMyLibraryTriggerFunc();
 }
 
-void run_testEfficiencies(string channel, string category)
+void run_testEfficiencies(string ModelName, string channel, string category,string decayMode,float mass,bool isNarrow =0)
 {
-  //const char* channel = "mu";
-  //string category = "HP";
+    
   std::cout << channel << "  " << category << std::endl;
-  vector<string> model_narrow = {"BulkGrav","Wprime","Zprime"};
-  vector<float> mass_narrow = {800,1000,1200,1400,1600,1800,2000,2500,3000,3500,4000,4500};
-  for(int i=0;i<model_narrow.size();i++)
+if(isNarrow)
+{
+  if(decayMode.find("lvjj")!=string::npos)
   {
-    std::cout << model_narrow.at(i) << std::endl;
-    for(int m=0;m<mass_narrow.size();m++)
-    {
-      vector<double> vetoEff1= makeEfficiencyTest(model_narrow.at(i),channel,category,mass_narrow.at(m),0.0);
-      std::cout<<mass_narrow.at(m)<< " & " <<vetoEff1[0]  << " & " <<  vetoEff1[1] << " & "<<std::endl;
-    }
+      vector<double> vetoEff1= makeEfficiencyTest(ModelName,channel,category,decayMode,mass,0.0);
+       std::cout << mass << " & "<< vetoEff1[0]  << " & " <<  vetoEff1[1] << " & "<<std::endl;
   }
+  else 
+  {
+    makeEfficiencyTest(ModelName,channel,category,decayMode,mass,0.0);
+  }
+}
+else
+{
+  makeEfficiencyTest(ModelName,channel,category,decayMode,mass,0.1);
+  makeEfficiencyTest(ModelName,channel,category,decayMode,mass,0.2);
+  makeEfficiencyTest(ModelName,channel,category,decayMode,mass,0.3);
+}  
  
-
-  
-  
-  vector<string> model = {"Radion","RSGrav","Wprime","Zprime"};
-  vector<float> mass = {800,1200,2000,3000,4000};
-  for(int m=0;m<mass.size();m++)
+ /* 
+   std::cout << channel << "  " << category << std::endl;
+if(isNarrow)
+{
+  if(decayMode.find("lvjj")!=string::npos)
   {
-  for(int i=0;i<model.size();i++)
+      vector<double> vetoEff1= makeEfficiencyTestVersion2HAD(ModelName,channel,category,decayMode,mass,0.0);
+       std::cout << mass << " & "<< vetoEff1[0]  << " & " <<  vetoEff1[1] << " & "<<std::endl;
+  }
+  else 
   {
-  makeEfficiencyTest(model.at(i),channel,category,mass.at(m),0.1);
-  makeEfficiencyTest(model.at(i),channel,category,mass.at(m),0.2);
-  makeEfficiencyTest(model.at(i),channel,category,mass.at(m),0.3);
+    makeEfficiencyTestVersion2HAD(ModelName,channel,category,decayMode,mass,0.0);
   }
-  }
-   
+}
+else
+{
+  makeEfficiencyTestVersion2HAD(ModelName,channel,category,decayMode,mass,0.1);
+  makeEfficiencyTestVersion2HAD(ModelName,channel,category,decayMode,mass,0.2);
+  makeEfficiencyTestVersion2HAD(ModelName,channel,category,decayMode,mass,0.3);
+}  
+   */
 }

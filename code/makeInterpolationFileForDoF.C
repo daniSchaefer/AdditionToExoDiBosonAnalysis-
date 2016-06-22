@@ -42,10 +42,18 @@ namespace{
   int loadMyLibraryTrigger = loadMyLibraryTriggerFunc();
 }
 
-void makeInterpolationFileForDoF(string ModelName, string category)
+void makeInterpolationFileForDoF(string ModelName, string category,string decayMode="WW_lvjj")
 {
- string input_directory =  "/usr/users/dschaefer/root/results/testFit/semileptonic/ToWW/logfiles/";
+ string VV = determineVV(decayMode);
+ string mode = determineSemilepHadOrLep(decayMode);
   
+ string input_directory =  "/usr/users/dschaefer/root/results/testFit/"+mode+"/To"+VV+"/logfiles/";
+ 
+ string filename = input_directory+"InterpolateHighMassCorrections_"+ModelName+"_"+category+".root";;
+ if(decayMode.find("lvjj")!=string::npos)
+ {
+   filename = "/home/dschaefer/root/analysisCodeJennifer/EXOVVFitter-master_original/interpolationFiles/InterpolateHighMassCorrections_"+ModelName+"_"+category+".root";
+ }
    
 
  double mass[2]={3000,4000};
@@ -118,7 +126,7 @@ void makeInterpolationFileForDoF(string ModelName, string category)
  InterpolateHighMassCorrections_el->cd();
  In_HighMassCorrections_el->Draw("AL");
  std::cout << In_HighMassCorrections_mu->Eval(0.15,0,"a") <<std::endl;
- string filename = "/home/dschaefer/root/analysisCodeJennifer/EXOVVFitter-master_original/interpolationFiles/InterpolateHighMassCorrections_"+ModelName+"_"+category+".root";
+ 
  TFile* f= new TFile(filename.c_str(),"RECREATE");
  In_HighMassCorrections_el->SetName("a0_over_gamma_M4000_el");
  In_HighMassCorrections_mu->SetName("a0_over_gamma_M4000_mu");

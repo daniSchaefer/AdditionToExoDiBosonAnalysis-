@@ -18,8 +18,8 @@
 #include "/usr/users/dschaefer/root/headerfiles/StyleFunc.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/WorkOnHistos.h"
 #include "/usr/users/dschaefer/root/headerfilesAllChannels/General.h"
-
-
+#include "/usr/users/dschaefer/root/headerfiles/WWConstants.h"
+#include "/usr/users/dschaefer/root/headerfiles/AllHadronicConstants.h"
 
 using namespace std;
 
@@ -35,7 +35,7 @@ namespace{
 
 
  
-void WpolarisationTEST(string ModelName1, string ModelName2,string category, int mass=0)
+void WpolarisationTEST(string ModelName1, string ModelName2,string category,string decayMode, int mass=0)
 {
  
   string Sinput_filename1;
@@ -43,10 +43,13 @@ void WpolarisationTEST(string ModelName1, string ModelName2,string category, int
   string Sinput_filename3;
   string Sinput_filename4;
   
+  string VV = determineVV(decayMode);
+  string mode = determineSemilepHadOrLep(decayMode);
+  
  string outputfileName;
  if(mass==0)
  {
-  outputfileName = "/usr/users/dschaefer/root/results/Efficiency/semileptonic/ToWW/Wpolarisation_Ratios_"+ModelName1+"_"+ModelName2+"_"+category+".pdf"; 
+  outputfileName = "/usr/users/dschaefer/root/results/Efficiency/"+mode+"/To"+VV+"/Wpolarisation_Ratios_"+ModelName1+"_"+ModelName2+"_"+category+".pdf"; 
    
   
  }
@@ -57,19 +60,42 @@ void WpolarisationTEST(string ModelName1, string ModelName2,string category, int
   
  if(mass == 0)
  {
-  Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/"+ModelName1+"ToWWKinematics_el_"+category+".root";
-  Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/"+ModelName1+"ToWWKinematics_mu_"+category+".root";
-  Sinput_filename3 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/"+ModelName2+"ToWWKinematics_el_"+category+".root";
-  Sinput_filename4 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/"+ModelName2+"ToWWKinematics_mu_"+category+".root";
+  Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName1+"ToWWKinematics_el_"+category+".root";
+  Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName1+"ToWWKinematics_mu_"+category+".root";
+  Sinput_filename3 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName2+"ToWWKinematics_el_"+category+".root";
+  Sinput_filename4 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName2+"ToWWKinematics_mu_"+category+".root";
+  
+  if(decayMode.find("jjjj")!=string::npos)
+  {
+  Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName1+"ToWWKinematics_had_"+category+".root";
+  Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName1+"ToWWKinematics_had_"+category+".root";
+  Sinput_filename3 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName2+"ToWWKinematics_had_"+category+".root";
+  Sinput_filename4 = "/storage/jbod/dschaefer/EfficiencyHistos/"+mode+"/To"+VV+"/"+ModelName2+"ToWWKinematics_had_"+category+".root";
+    
+  }
+  
   if(ModelName1.find("Wprime")!=string::npos)
   {
     Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWZ/"+ModelName1+"ToWZKinematics_el_"+category+".root";
     Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWZ/"+ModelName1+"ToWZKinematics_mu_"+category+".root";
+    if(decayMode.find("jjjj")!=string::npos)
+    {
+      Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/hadronic/ToWZ/"+ModelName1+"ToWZKinematics_had_"+category+".root";
+      Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/hadronic/ToWZ/"+ModelName1+"ToWZKinematics_had_"+category+".root";
+      
+    }
+    
   }
   if(ModelName2.find("Wprime")!=string::npos)
   {
     Sinput_filename3 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWZ/"+ModelName2+"ToWZKinematics_el_"+category+".root";
     Sinput_filename4 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWZ/"+ModelName2+"ToWZKinematics_mu_"+category+".root";
+    if(decayMode.find("jjjj")!=string::npos)
+    {
+      Sinput_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/hadronic/ToWZ/"+ModelName2+"ToWZKinematics_had_"+category+".root";
+      Sinput_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/hadronic/ToWZ/"+ModelName2+"ToWZKinematics_had_"+category+".root";
+      
+    }
   }
   
  }
@@ -101,6 +127,8 @@ TFile * BulkGravMu = new TFile(input_filename2,"READ");
 TFile * RSGravEl = new TFile(input_filename3,"READ");
 TFile * RSGravMu = new TFile(input_filename4,"READ");
 
+if(decayMode.find("lvjj")!=string::npos)
+{
  TH2F* hBulkGMu_rec 		= (TH2F*) BulkGravMu->Get("hW_lep_rec");
  TH2F* hBulkG_had_rec		= (TH2F*) BulkGravMu->Get("hW_had_rec");
  TH2F* hBulkGEl_rec 		= (TH2F*) BulkGravEl->Get("hW_lep_rec");
@@ -327,7 +355,189 @@ TFile * RSGravMu = new TFile(input_filename4,"READ");
  std::cout << std::endl;
  std::cout << std::endl;
  std::cout << std::endl;
+}
+if(decayMode.find("jjjj")!=string::npos)
+{
+ TH2F* h1_jet1_rec 		= (TH2F*) BulkGravMu->Get("h_jet1_numerator");
+ TH2F* h2__jet1_rec		= (TH2F*) RSGravMu->Get("h_jet1_numerator");
+ TH2F* h1_jet1_gen 		= (TH2F*) BulkGravMu->Get("h_jet1_denominator");
+ TH2F* h2_jet1_gen	 	= (TH2F*) RSGravMu->Get("h_jet1_denominator");
+ TH2F* h1_jet2_rec 		= (TH2F*) BulkGravMu->Get("h_jet2_numerator");
+ TH2F* h2__jet2_rec		= (TH2F*) RSGravMu->Get("h_jet2_numerator");
+ TH2F* h1_jet2_gen 		= (TH2F*) BulkGravMu->Get("h_jet2_denominator");
+ TH2F* h2_jet2_gen		= (TH2F*) RSGravMu->Get("h_jet2_denominator");
  
+ double Nevents_jet1_h1		= h1_jet1_gen->GetEntries();
+ double Nevents_jet1_h2   	= h2_jet1_gen->GetEntries();
+ double Nevents_jet2_h1 	= h1_jet2_gen->GetEntries();
+ double Nevents_jet2_h2		= h1_jet2_gen->GetEntries();
+ double Nevents_rec_jet1_h1 	= h1_jet1_rec->GetEntries();
+ double Nevents_rec_jet1_h2	= h2__jet1_rec->GetEntries();
+ double Nevents_rec_jet2_h1 	= h1_jet2_rec->GetEntries();
+ double Nevents_rec_jet2_h2	= h2__jet2_rec->GetEntries();
+ 
+ 
+ 
+ 
+ 
+ 
+ std::cout<<"Number of generated Events in "<<ModelName1<<" : " << Nevents_jet1_h1<<std::endl;
+ std::cout<<"Efficiency "<<ModelName1 << " jet1 : "<<Nevents_rec_jet1_h1/Nevents_jet1_h1<<std::endl;
+ std::cout<<"Efficiency "<<ModelName1 << " jet2 : "<<Nevents_rec_jet2_h1/Nevents_jet2_h1<<std::endl;
+ std::cout<<"Efficiency "<<ModelName1 <<" overall : "<<Nevents_rec_jet1_h1*Nevents_rec_jet2_h1/Nevents_jet1_h1/Nevents_jet2_h1<<std::endl;
+  std::cout <<std::endl;
+  
+  std::cout<<"Number of generated Events in "<<ModelName2<<" : " << Nevents_jet1_h2<<std::endl;
+ std::cout<<"Efficiency "<<ModelName2 << " jet1 : "<<Nevents_rec_jet1_h2/Nevents_jet1_h2<<std::endl;
+ std::cout<<"Efficiency "<<ModelName2 << " jet2 : "<<Nevents_rec_jet2_h2/Nevents_jet2_h2<<std::endl;
+ std::cout<<"Efficiency "<<ModelName2 <<" overall : "<<Nevents_rec_jet1_h2*Nevents_rec_jet2_h2/Nevents_jet1_h2/Nevents_jet2_h2<<std::endl;
+  std::cout <<std::endl;
+ 
+  
+  double ratio = (Nevents_rec_jet1_h1*Nevents_rec_jet2_h1/Nevents_jet1_h1/Nevents_jet2_h1)*1/(Nevents_rec_jet1_h2*Nevents_rec_jet2_h2/Nevents_jet1_h2/Nevents_jet2_h2);
+  
+  
+  std::cout << " alternative : " << std::endl;
+  double eRadion = 12269/53546.0;
+  double eBulkGrav = 27905/113628.0;
+  std::cout << " overall efficiency Radion : " << eRadion << std::endl;
+  std::cout << " overall efficiency BulkGrav : " << eBulkGrav << std::endl;
+  
+  double ratio2 = eBulkGrav/eRadion;
+  
+  std::cout << ratio << " " << ratio2 << std::endl;
+
+  
+ string titleEFF = ModelName1+" jet1";
+ TCanvas *ceff1 = new TCanvas("ceff1",titleEFF.c_str(),400,400);
+ titleEFF = ModelName1+" jet2";         
+ TCanvas *ceff2 = new TCanvas("ceff2",titleEFF.c_str(),400,400);
+ 
+  titleEFF = ModelName2+"jet1";
+ TCanvas *RSceff1 = new TCanvas("RSceff1",titleEFF.c_str(),400,400);
+ titleEFF = ModelName2+" jet2";
+ TCanvas *RSceff2 = new TCanvas("RSceff2",titleEFF.c_str(),400,400);
+ 
+ 
+ const char* zAxistitle = "Reconstruction and ID efficiencies #times 1/2";
+  
+ TH2* eff_h1_jet1 =  		GetEfficiencies(h1_jet1_rec,h1_jet1_gen,ceff1,zAxistitle);
+ TH2* eff_h1_jet2 = 		GetEfficiencies(h1_jet2_rec,h1_jet2_gen,ceff2,zAxistitle);
+ TH2* eff_h2_jet1 = 		GetEfficiencies(h2__jet1_rec,h2_jet1_gen,RSceff1,zAxistitle);
+ TH2* eff_h2_jet2 =		GetEfficiencies(h2__jet2_rec,h2_jet2_gen,RSceff2,zAxistitle);
+ 
+ 
+ 
+ 
+ SetStyleEffPlots(eff_h1_jet1,ceff1, ModelName1.c_str(),"W #rightarrow q #bar{q}'","",2500,zAxistitle);
+ SetStyleEffPlots(eff_h2_jet1,RSceff1,ModelName2.c_str(),"W #rightarrow q #bar{q}'","",2500,zAxistitle);
+ SetStyleEffPlots(eff_h1_jet2,ceff2,ModelName1.c_str(),"W #rightarrow q #bar{q}'","",2500,zAxistitle);
+ SetStyleEffPlots(eff_h2_jet2,RSceff2,ModelName2.c_str(),"W #rightarrow q #bar{q}'","",2500,zAxistitle);
+ 
+  
+ 
+
+ string title = ModelName1+"/"+ModelName2+", hadronic channel jet1";
+ TCanvas* vis = new TCanvas("vis","vis",800,400);
+ vis->Divide(2,1);
+ TH2* Ratio_eff = (TH2*) eff_h1_jet1->Clone("Ratio_eff");
+ Ratio_eff->GetZaxis()->SetTitle("Reconstruction and ID efficiencies #times 1/2");
+ Ratio_eff->GetZaxis()->SetTitle("Reconstruction and ID efficiencies #times 1/2");
+ Ratio_eff->Divide(eff_h2_jet1);
+ //Ratio_eff->GetZaxis()->SetRangeUser(0.5,2.0);
+ //Ratio_eff->SetMinimum(0.5);
+ Ratio_eff->SetMaximum(2.0);
+ Ratio_eff->SetTitle(title.c_str());
+ vis->cd(1);
+ Ratio_eff->Draw("COLZ");
+ Ratio_eff->GetZaxis()->SetTitle("Reconstruction and ID efficiencies #times 1/2");
+ vis->cd(2);
+ TH2* Ratio_eff_jet2 = (TH2*) eff_h1_jet2->Clone("Ratio_eff_jet2");
+ Ratio_eff_jet2->Divide(eff_h2_jet2);
+ Ratio_eff_jet2->SetMaximum(2.0);
+ Ratio_eff->SetMaximum(2.0);
+ Ratio_eff_jet2->GetZaxis()->SetTitle("Reconstruction #times ID Efficiencies #times 1/2");
+ title = ModelName1+"/"+ModelName2+", hadronic channel jet2 ";
+ Ratio_eff_jet2->SetTitle(title.c_str());
+ Ratio_eff_jet2->Draw("COLZ");
+ vis->cd(3);
+ 
+ vis->Update();
+ 
+ 
+ vis->SaveAs(outputfileName.c_str());
+ 
+ 
+ double testChi2_2D_eff_jet1 = eff_h1_jet1->Chi2Test(eff_h2_jet1,"WWP");
+ std::cout << std::endl;
+ std::cout << std::endl;
+ std::cout<<"histo 1(W_pt, W_eta) = efficiency (jet1 Events after selection/jet1 Events generated), "<<ModelName1<<" sample;" <<std::endl;
+ std::cout<<"histo 2(W_pt, W_eta) = efficiency (jet1 Events after selection/jet1 Events generated) , "<<ModelName2 << std::endl;
+ std::cout<<" p-Value: Chi2(histo1,histo2) = " << testChi2_2D_eff_jet1 << std::endl;
+ std::cout << std::endl;
+ std::cout << std::endl;
+ std::cout << std::endl;
+ double testChi2_2D_eff_jet2 = eff_h1_jet2->Chi2Test(eff_h2_jet2,"WWP");
+ std::cout << std::endl;
+ std::cout << std::endl;
+  std::cout<<"histo 1(W_pt, W_eta) = efficiency (jet2 Events after selection/el Events generated), "<<ModelName1<<" sample;" <<std::endl;
+ std::cout<<"histo 2(W_pt, W_eta) = efficiency (el Events after selection/el Events generated) , "<<ModelName2 <<" Sample" << std::endl;
+ std::cout<<" p-Value: Chi2(histo1,histo2) = " << testChi2_2D_eff_jet2 << std::endl;
+ std::cout << std::endl;
+ std::cout << std::endl;
+ std::cout << std::endl;
+ 
+ vector<double> BinsX = ALLHADBINNINGX;
+ vector<double> BinsY = ALLHADBINNINGY;
+ 
+ PrintBinContents(Ratio_eff,BinsX,BinsY," jet1 efficiencies ");
+ PrintBinContents(Ratio_eff_jet2,BinsX,BinsY," jet2 efficiencies ");
+ h1_jet1_gen->SetLineColor(kRed);
+ 
+ TH1D* proj_BulkG_had_pt = h1_jet1_gen->ProjectionX("proj_BulkG_had_pt");
+ //proj_BulkG_had_pt->Add(h1_jet2_gen->ProjectionX());
+ TH1D* proj_BulkG_had_eta = h1_jet1_gen->ProjectionY("proj_BulkG_had_eta");
+ //proj_BulkG_had_eta->Add(h1_jet2_gen->ProjectionY());
+ 
+ TH1D* proj_RSG_had_pt = h2_jet1_gen->ProjectionX("proj_RSG_had_pt");
+ //proj_RSG_had_pt->Add(h2_jet2_gen->ProjectionX());
+ TH1D* proj_RSG_had_eta = h2_jet1_gen->ProjectionY("proj_RSG_had_eta");
+ //proj_RSG_had_eta->Add(h2_jet2_gen->ProjectionY());
+ 
+ 
+ TCanvas* canvas = new TCanvas("canvas","canvas",800,400);
+ canvas->Divide(2,1);
+ canvas->cd(1);
+ gStyle->SetOptStat(0);
+ proj_BulkG_had_pt->SetLineColor(kRed);
+ proj_RSG_had_pt->SetLineColor(kBlue);
+//  proj_BulkG_had_pt->SetFillColor(4000);
+//  proj_RSG_had_pt->SetFillColor(4000);
+//  proj_BulkG_had_eta->SetFillColor(4000);
+//  proj_RSG_had_eta->SetFillColor(4000);
+ proj_BulkG_had_pt->Draw();
+ proj_RSG_had_pt->Draw("SAME");
+ TLegend* leg1= new TLegend(0.9,0.68,0.5,0.8);
+ leg1->SetBorderSize(0);
+ leg1->SetFillColor(0);
+ leg1->AddEntry(proj_BulkG_had_pt,"x projection model1 ","lep"); 
+ leg1->AddEntry(proj_RSG_had_pt,"x projection model2 ","lep"); 
+ leg1->Draw();
+ canvas->cd(2);
+ proj_BulkG_had_eta->SetLineColor(2);
+ proj_RSG_had_eta->SetLineColor(kBlue);
+ proj_BulkG_had_eta->Draw();
+ proj_RSG_had_eta->Draw("][same");
+ TLegend* leg= new TLegend(0.9,0.68,0.5,0.8);
+ leg->SetBorderSize(0);
+ leg->SetFillColor(0);
+ leg->AddEntry(proj_BulkG_had_eta,"y projection model1","lep"); 
+ leg->AddEntry(proj_RSG_had_eta,"y projection model2","lep"); 
+ leg->Draw();
+ canvas->Update();
+  
+  
+}
 }
  
  

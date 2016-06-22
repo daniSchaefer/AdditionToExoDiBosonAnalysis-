@@ -46,17 +46,16 @@ namespace{
 }
 
 //run with: root -l
-//.x run_checkFitCBBW()
+//.x run_checkFitCBBW.C("Wprime","had","HP","WZ_jjjj")
 //fits the DCB to the narrow width sameple -> draws convolution width BW into Canvas with MC sample with width >0
 //possible models: BulkGrav, Wprime, Zprime, Radion, RSGrav but look out: not all files for all models exist
 //Ymax is the maximum for the y-Axis of the convolution plot -> must be set per hand to a value so that the plot looks good
 
-void run_checkFitCBBW(string ModelName,string channel, string category,bool checkNarrow =0)
+void run_checkFitCBBW(string ModelName,string channel, string category,string decayMode,bool checkNarrow =0)
 {
-// string channel = "el";
-// string ModelName = "Radion";
-// string category = "HPW";
-string logfileName = "/usr/users/dschaefer/root/results/testFit/semileptonic/ToWW/log_GoodnessOfFit_WideSamples_"+ModelName+"_"+channel+".txt";
+string VV = determineVV(decayMode);
+string mode = determineSemilepHadOrLep(decayMode);
+string logfileName = "/usr/users/dschaefer/root/results/testFit/"+mode+"/To"+VV+"/log_GoodnessOfFit_WideSamples_"+ModelName+"_"+channel+".txt";
 ofstream logfile;
 logfile.open(logfileName,ios::ate);
 std::cout << logfile.good() <<std::endl;
@@ -69,13 +68,23 @@ std::cout << logfile.good() <<std::endl;
 //========== check fit, narrow samples ========================
 //=============================================================  
 
-
-double mass_narrow[12]= {800,1000,1200,1400,1600,1800,2000,2500,3000,3500,4000,4500};
-for(int i=0;i<12;i++)
+if(decayMode.find("jjjj")!=string::npos)
 {
-checkNarrowFit(mass_narrow[i],channel,ModelName,category);
+  int n =8;
+  double mass_narrow[8]= {800,1200,1400,1600,1800,2500,3500,4500};
+  for(int i=0;i<n;i++)
+  {
+    checkNarrowFit(mass_narrow[i],channel,ModelName,category,decayMode);	
+  }
 }
-
+else
+{
+  double mass_narrow[12]= {800,1000,1200,1400,1600,1800,2000,2500,3000,3500,4000,4500};
+  for(int i=0;i<12;i++)
+  {
+    checkNarrowFit(mass_narrow[i],channel,ModelName,category,decayMode);	
+  }
+}
 
 }  
 else
@@ -90,41 +99,81 @@ double gamma[3]={0.1,0.2,0.3};
 //Zprime
 if(ModelName.find("Zprime")!=string::npos or ModelName.find("Wprime") !=string::npos)
 {
- double y[5][3] ={{650,800,700},{600,700,600},{500,550,500},{700,400,300},{400,300,250}};
- for(int i=0;i<5;i++)
-{
-  for(int l=0;l<3;l++)
+ if(decayMode.find("jjjj")!=string::npos)
+ {
+  double yHAD[5][3]={{600,600,350},{400,300,400},{250,80,250},{300,200,150},{200,150,100}};
+  for(int i=0;i<5;i++)
   {
-    checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,y[i][l]);
+    for(int l=0;l<3;l++)
+    {
+      checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,yHAD[i][l]);
+    }
   }
-  
-}
+  }
+  else
+  { 
+  double y[5][3] ={{650,800,700},{600,700,600},{500,550,500},{700,400,300},{400,300,250}};
+  for(int i=0;i<5;i++)
+  {
+    for(int l=0;l<3;l++)
+    {
+      checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,y[i][l]);
+    }
+  }
+  }
 }
 //RSGrav
 if(ModelName.find("RSGrav")!=string::npos)
 {
-double  y[5][3]={{300,200,400},{400,300,350},{300,400,300},{400,300,250},{400,300,250}};
-for(int i=0;i<5;i++)
-{
-  for(int l=0;l<3;l++)
+  if(decayMode.find("jjjj")!=string::npos)
+ {
+  double yHAD[5][3]={{600,600,350},{350,250,200},{200,200,200},{200,150,100},{150,100,100}};
+  for(int i=0;i<5;i++)
   {
-    checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,y[i][l]);
+    for(int l=0;l<3;l++)
+    {
+      checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,yHAD[i][l]);
+    }
   }
-  
-}
+  }
+  else
+  {
+    double  y[5][3]={{300,200,400},{400,300,350},{300,400,300},{400,300,250},{400,300,250}};
+    for(int i=0;i<5;i++)
+    {
+      for(int l=0;l<3;l++)
+      {
+	checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,y[i][l]);
+      }
+    }
+  }
 }
 //Radion
 if(ModelName.find("Radion")!=string::npos)
 {
- double y[5][3]={{600,600,350},{500,350,350},{350,500,400},{400,300,250},{400,300,250}};
- for(int i=0;i<5;i++)
-{
-  for(int l=0;l<3;l++)
+ if(decayMode.find("jjjj")!=string::npos)
+ {
+  double yHAD[5][3]={{600,600,350},{350,250,200},{200,200,200},{200,150,100},{150,100,100}};
+  for(int i=0;i<5;i++)
   {
-    checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,y[i][l]);
+    for(int l=0;l<3;l++)
+    {
+      checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,yHAD[i][l]);
+    }
   }
+  }
+  else
+  {
+    double y[5][3]={{600,600,350},{500,350,350},{350,500,400},{400,300,250},{400,300,250}};
+    for(int i=0;i<5;i++)
+    {
+      for(int l=0;l<3;l++)
+      {
+	checkFitCBBW(logfile,mass[i],gamma[l],channel,ModelName,category,decayMode,y[i][l]);
+      }
   
-}
+    }
+  }
 }
 
 
