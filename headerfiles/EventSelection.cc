@@ -88,6 +88,49 @@ bool genEventSelectionInclusive(MyClass* t12, string decayMode)
   else
     return 0;
 }
+//=================================================================================
+int genEventVVClassification(MyClass* t12)
+{
+  int Nparticles = t12->genParticle_N;
+  vector<int> pdgId_dau;
+  int particle_pdgId;
+  int W=0;
+  int Z=0;
+  
+  for(int i=0;i<Nparticles;i++)
+  {
+    particle_pdgId = t12->genParticle_pdgId->at(i);
+    if(TMath::Abs(particle_pdgId) != 23 and TMath::Abs(particle_pdgId) != 24)
+    { 
+      continue;
+    }
+    if(TMath::Abs(particle_pdgId)==23)
+    {Z+=1;}
+    if(TMath::Abs(particle_pdgId)==24)
+    {W+=1;}
+
+  }
+  return (W*24 + Z*23);
+}
+
+//==================================================================================
+//======== generator kinematic cuts for hadronic selection =========================
+//==================================================================================
+
+bool applyGeneratorKinematicSelectionsAllHad(TLorentzVector V1, TLorentzVector V2)
+{
+    bool passed =1;
+    if(V1.Pt()<= JETPT or V2.Pt()<= JETPT)
+    {passed =0;}
+    if(TMath::Abs(V1.Eta())>=JETETA or TMath::Abs(V2.Eta())>=JETETA)
+    {passed =0;}
+    if(TMath::Abs(V1.Eta()-V2.Eta())>=DELTAETAJETJET)
+    {passed=0;}
+    if((V1+V2).M()<=DIJETMASS)
+    {passed=0;}
+  
+  return passed;
+}
 
 //-----------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -573,6 +616,31 @@ int EventSelection( int pdgId,MyClass* t12)
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
+bool recoEventSelectionMVVSystemSemilep(TLorentzVector l, TLorentzVector n, TLorentzVector W_had)
+{
+    TLorentzVector W_lep = l+n;
+    if(!applyBackToBackTopology(l,W_had,W_lep,n))
+      return 0;
+    else
+    {
+      if((W_lep+W_had).M()> WWMASSMAX or (W_lep+W_had).M()<WWMASSMIN)
+      {
+	return 0;
+      }
+      else if(W_lep.Pt()<200 or W_had.Pt()<200)
+      {
+	return 0;
+      }
+      else
+      {
+	return 1;
+      }
+    }
+}
+
+
+//==============================================================================
+
 
 int generatedEventSelection( int pdgId, MyClass* t12,bool applyMassCut)
 {
@@ -598,11 +666,11 @@ int generatedEventSelection( int pdgId, MyClass* t12,bool applyMassCut)
   {
     if(!applyMassCut)
     {
-      R =(kinematicCuts(W_lep.Pt(),W_lep.Eta(),24) and kinematicCuts(l.Pt(), l.Eta(),pdgId) and kinematicCuts(n.Pt(),n.Eta(),pdgId+1)) and applyBackToBackTopology(l,W_had,W_lep,n); 
+      R =(kinematicCuts(W_had.Pt(),W_had.Eta(),1) and kinematicCuts(W_lep.Pt(),W_lep.Eta(),24) and kinematicCuts(l.Pt(), l.Eta(),pdgId) and kinematicCuts(n.Pt(),n.Eta(),pdgId+1)) and applyBackToBackTopology(l,W_had,W_lep,n); 
     }
     else
     {
-    R =(kinematicCuts(W_had.Pt(),W_had.Eta(), 24) and kinematicCuts(W_lep.Pt(),W_lep.Eta(),24) and kinematicCuts(l.Pt(), l.Eta(),pdgId) and kinematicCuts(n.Pt(),n.Eta(),pdgId+1)) and applyBackToBackTopology(l,W_had,W_lep,n);
+    R =(kinematicCuts(W_had.Pt(),W_had.Eta(),1) and kinematicCuts(W_lep.Pt(),W_lep.Eta(),24) and kinematicCuts(l.Pt(), l.Eta(),pdgId) and kinematicCuts(n.Pt(),n.Eta(),pdgId+1)) and applyBackToBackTopology(l,W_had,W_lep,n);
     }
   }
   if(R==1 and WM==1)

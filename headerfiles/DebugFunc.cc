@@ -12,6 +12,7 @@
 #include "Op.h"
 #include "EventSelection.h"
 #include "WWConstants.h"
+#include "AllHadronicConstants.h"
 
 using namespace std;
 

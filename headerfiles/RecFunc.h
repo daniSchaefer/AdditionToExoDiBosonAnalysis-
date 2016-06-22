@@ -4,6 +4,10 @@
 #include "TLorentzVector.h"
 #include "MyClass.h"
 
+//reconstruct the Lorentzvector for the first(second) hadronically decaying boson
+TLorentzVector reconstructV1(MyClass* t12);
+TLorentzVector reconstructV2(MyClass* t12);
+
 // recontruct the leptonically decaying W boson from lepton 4-momentum and missing transverse Energie
 TLorentzVector recNeutrino(Double_t MET,Double_t MET_phi ,TLorentzVector lepton);
 

@@ -14,6 +14,32 @@
 #include "WWConstants.h"
 
 
+//=============================================================================
+//============== reconstruct Boson for all hadronic channel ===================
+//=============================================================================
+TLorentzVector reconstructV1(MyClass* t12)
+{
+      TLorentzVector jet1;
+      vector<int> cand = hadronicJetCandidates(t12);
+      vector<float>* jet_pt = t12->jetAK8_pt;
+      vector<float>* jet_eta = t12->jetAK8_eta;
+      vector<float>* jet_phi = t12->jetAK8_phi;
+      vector<float>* jet_e = t12->jetAK8_e;
+      jet1.SetPtEtaPhiE(jet_pt->at(cand[0]),jet_eta->at(cand[0]),jet_phi->at(cand[0]),jet_e->at(cand[0]));
+  return jet1;
+}
+TLorentzVector reconstructV2(MyClass* t12)
+{
+      TLorentzVector jet1;
+      vector<int> cand = hadronicJetCandidates(t12);
+      vector<float>* jet_pt = t12->jetAK8_pt;
+      vector<float>* jet_eta = t12->jetAK8_eta;
+      vector<float>* jet_phi = t12->jetAK8_phi;
+      vector<float>* jet_e = t12->jetAK8_e;
+      jet1.SetPtEtaPhiE(jet_pt->at(cand[1]),jet_eta->at(cand[1]),jet_phi->at(cand[1]),jet_e->at(cand[1]));
+  return jet1;
+}
+
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

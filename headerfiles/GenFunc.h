@@ -35,4 +35,11 @@ void getKinematicsFromGeneratedEvents(TH2F* histo, int pdgId, MyClass* t12);
 //returns the generated LV of lepton
 TLorentzVector getGeneratedLepton(int pdgId, MyClass* t12);
 
+//returns vector with pt,eta,phi,e of two hadronically decaying V (W or Z) bosons.
+//the first four elements belong to the first LV, the second 4 to the second
+vector<float> getGenLVAllHadronic(MyClass* t12);
+TLorentzVector getGenLV_V1(MyClass* t12);
+TLorentzVector getGenLV_V2(MyClass* t12);
+
+int calcQuarkCharge(int pdgId_q1);
 #endif

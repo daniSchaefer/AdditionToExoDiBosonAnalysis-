@@ -1,13 +1,14 @@
 #ifndef DEBUGFUNC_H
 #define DEBUGFUNC_H
 
-
+#include "passed_mu_jes.h"
 
 //get pdgIds of every particle, and his mother and daughter particles of events in vector event
 void get_pdgId(vector<int> event, string name_output_file, MyClass* t12);
 void get_pdgId( string name_output_file, MyClass* t12);
 
 bool isEventInList(int event, vector<int> listOfEvents);
+
 
 
 //this function returns a list that contains all events from list1

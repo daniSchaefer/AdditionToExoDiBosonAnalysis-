@@ -40,7 +40,7 @@ int isRightAK8jet(int p, MyClass* t12/*,const char* category="hp"*/);
 int isVetoAK4jet(int p, MyClass* t12);
   
 //following function checks only the kinematic criteria 
-int kinematicCuts(Double_t pt, Double_t eta,int pdgId);
+bool kinematicCuts(Double_t pt, Double_t eta,int pdgId);
 
 //get the P 4 vector of generated hadronic Z
 TLorentzVector getLVofGenZhad(MyClass* t12);
@@ -65,10 +65,17 @@ TLorentzVector getLVofGenParticle( int pdgId, MyClass* t12);
 //"HLT_Ele115_CaloIdVT_GsfTrkIdT"
 bool isTriggerFired(const char* trigger, MyClass* t12);
 
+//==========================================================================
+//======functions for all had. selections ==================================
+//==========================================================================
+
+
+//checks if a jet candidate overlaps with a muon/electron candidate
+bool passedOverlap(TLorentzVector jet,MyClass* t12);
 //all hadronic analysis: find jets with highest Pt that have a tight jet ID
 vector<int> hadronicJetCandidates(MyClass*t12);
 //for all hadronic part, checks preselections from AN2015_211_v10
-bool highestPtJetsAreCandidates(MyClass* t12);
+bool passedAllHadronicSelections(MyClass* t12);
 
 //apply D eta_jj < 1.3
 bool AllHadPassedDEtajj(MyClass* t12 , vector<int> index);
@@ -77,4 +84,27 @@ bool AllHadPassedMjj(MyClass* t12, vector<int> index);
 //apply lower pruned mass cut
 bool AllHadPassedPrunedMassCut(MyClass* t12, vector<int> index);
 
+bool AllHadPassedDEtajj(TLorentzVector jet1, TLorentzVector jet2);
+//apply M_jj >1000
+bool AllHadPassedMjj(TLorentzVector jet1, TLorentzVector jet2);
+
+
+bool test(MyClass* t12);
+
+//for category something like:
+//HP_WW, HP_WZ, HP_ZZ (or LP)-> these are the categories in AN2015_211_v10
+//i.e. the pruned mass windows for W, Z are explicitly used
+//if you don't want that (use window from 65 to 105) do HP_VV
+bool passedSubstructureSelection(MyClass* t12, string category);
+
+//============================================================================
+//=========functions for all had. efficiency =================================
+//============================================================================
+
+int findFirstJet(MyClass* t12);
+int findSecondJet(MyClass* t12);
+bool applyPrunedMassCut(int indexJet,MyClass* t12);
+bool applySubjettinessHighPurity(int indexJet,MyClass* t12);
+bool applyPrunedMassCutAndSubjettinessHighPurity(int indexJet,MyClass* t12);
+bool applyJetCuts(string category,int index, MyClass* t12);
 #endif

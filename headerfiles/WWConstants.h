@@ -48,7 +48,7 @@
 
 //constants for WW system
 #define WWMASSMIN 700
-#define WWMASSMAX 6000
+#define WWMASSMAX 5000
 #define WWDELTAPHIWHADMET  2
 #define WWDELTAPHIWHADWLEP 2
 #define WWDELTARWHADLEPTON TMath::Pi()/2.0
@@ -67,6 +67,9 @@
 #define WZZMASSMAX 70
 #define WZZMASSMIN 110
 
-
+#define BINNINGX {0,200,250,300,400,500,600,700,800,1000,1200,1500,2000,2500,3000,4000}
+#define BINNINGY {0,0.2,0.4,0.6,0.8,1.0,1.25,1.5,2.0,2.5}
+#define NBINSX 16
+#define NBINSY 10
 
 #endif

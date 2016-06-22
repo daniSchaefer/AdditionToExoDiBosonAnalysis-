@@ -9,6 +9,12 @@
 //if decayMode doesn't match these strings it just returns 0 
 bool genEventSelectionInclusive(MyClass* t12, string decayMode);
 
+//classifiy events in WW, WZ and ZZ
+//return value = 24*number of W's in event + 23 * number of Z's in event
+int genEventVVClassification(MyClass* t12);
+//apply generator level kinematic cuts for the all hadronic channel
+bool applyGeneratorKinematicSelectionsAllHad(TLorentzVector V1, TLorentzVector V2);
+
 // seperate events in G->WW, G->Wl, G->W had, G-> l, had
 //operates on generated events
 vector<vector<int> > generatedSemiLepEventClassification(int howmany,MyClass* t12);
@@ -85,6 +91,9 @@ int applyHadronSelection( MyClass* t12,bool isHP =0, bool isLP = 0, bool isW=1, 
 //returns 1 if the event is sufficiently back to back i.e.
 //DR(W_had,l)>pi/2 and Dphi(W_had,MET)>2 and Dphi(W_had,W_lep)>2
 int applyBackToBackTopology(TLorentzVector l,TLorentzVector W_had, TLorentzVector W_lep , TLorentzVector n);
+
+//applies back to back topology and the mVV mass cut
+bool recoEventSelectionMVVSystemSemilep(TLorentzVector l, TLorentzVector n, TLorentzVector W_had);
 
 //applies both hadronic and leptonic event selection
 int EventSelection( int pdgId,MyClass* t12);
