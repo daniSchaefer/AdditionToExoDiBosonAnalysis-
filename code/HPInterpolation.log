@@ -1,0 +1,1204 @@
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.02/05                http://root.cern.ch |
+  |                               (c) 1995-2014, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag , 9 February 2015                                 |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+
+Processing run_checkFitCBBW.C...
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [702,910] --> [702,910]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=43706.3 FROM MIGRAD    STATUS=INITIATE      275 CALLS         276 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M800_mu_HP   1.00002e+00   9.00000e-02   0.00000e+00   9.96998e+00
+   2  alpha2_CB_M800_mu_HP   1.64000e+00   9.00000e-02   0.00000e+00   0.00000e+00
+   3  mean_CB_M800_mu_HP   8.90000e+02   5.00000e+00   0.00000e+00   1.32511e+03
+   4  n1_CB_M800_mu_HP   1.50000e+01   2.00000e+00   0.00000e+00   6.47007e+01
+   5  n2_CB_M800_mu_HP   1.50000e+01   2.00000e+00   0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_mu_HP   5.00000e+01   3.00000e+00   0.00000e+00  -1.13982e+03
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 2
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter2
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=42155 FROM HESSE     STATUS=FAILED          7 CALLS         325 TOTAL
+                     EDM=160.628    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M800_mu_HP   1.00013e+00   2.06803e-01   2.84781e-02   6.04679e-01
+   2  alpha2_CB_M800_mu_HP   1.64000e+00   1.25224e-01  -0.00000e+00   0.00000e+00
+   3  mean_CB_M800_mu_HP   8.45909e+02   1.03308e+00  -0.00000e+00   5.08593e+02
+   4  n1_CB_M800_mu_HP   1.24494e+01   5.44345e+00  -0.00000e+00  -1.89106e+00
+   5  n2_CB_M800_mu_HP   1.50000e+01   8.41471e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_mu_HP   6.03606e+01   1.18789e+00   0.00000e+00   1.30443e+01
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=42088.2 FROM MIGRAD    STATUS=CONVERGED     415 CALLS         416 TOTAL
+                     EDM=5.39231e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   3.6 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M800_mu_HP   1.16664e+00   5.75498e-02  -3.13555e-03  -3.19342e-02
+   2  alpha2_CB_M800_mu_HP   1.64000e+00   1.25224e-01  -0.00000e+00   0.00000e+00
+   3  mean_CB_M800_mu_HP   8.34234e+02   9.48037e-01  -1.07509e-04  -1.76894e-02
+   4  n1_CB_M800_mu_HP   2.16335e+01   4.40633e+00  -4.12786e-03   1.38631e-02
+   5  n2_CB_M800_mu_HP   1.50000e+01   8.41471e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_mu_HP   5.48890e+01   1.23345e+00   8.79607e-05  -4.03182e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.342e-03  0.000e+00  4.300e-03  9.363e-02  0.000e+00 -3.653e-02 
+  0.000e+00  1.620e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  4.300e-03  0.000e+00  8.988e-01  1.985e-01  0.000e+00  3.889e-01 
+  9.363e-02  0.000e+00  1.985e-01  2.220e+01  0.000e+00 -1.474e-01 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.000e+02  0.000e+00 
+ -3.653e-02  0.000e+00  3.889e-01 -1.474e-01  0.000e+00  1.525e+00 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.65686   1.000  0.000  0.078  0.344  0.000 -0.512
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.44491   0.078  0.000  1.000  0.044  0.000  0.332
+        4  0.39128   0.344  0.000  0.044  1.000  0.000 -0.025
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.65181  -0.512  0.000  0.332 -0.025  0.000  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 2
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter2
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=42088.2 FROM HESSE     STATUS=FAILED          5 CALLS         421 TOTAL
+                     EDM=5.39231e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M800_mu_HP   1.16664e+00   4.54762e-02   1.84725e-02  -2.46044e+00
+   2  alpha2_CB_M800_mu_HP   1.42117e+00   2.01202e-01  -0.00000e+00   4.35895e-01
+   3  mean_CB_M800_mu_HP   8.34234e+02   8.16293e-01  -1.07509e-04  -4.63709e+03
+   4  n1_CB_M800_mu_HP   2.16335e+01   1.41365e+01  -4.12786e-03  -2.25469e+02
+   5  n2_CB_M800_mu_HP   1.50000e+01   8.41471e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_mu_HP   5.48890e+01   8.96909e-01   8.79607e-05   6.27579e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.080e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  3.136e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  6.664e-01  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  5.583e+03  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.000e+02  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  8.054e-01 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 42088.2, estimated distance to minimum: 5.39231e-05
+                covariance matrix quality: Approximation only, not accurate
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M800_mu_HP    1.1666e+00 +/-  4.55e-02
+  alpha2_CB_M800_mu_HP    1.4212e+00 +/-  2.01e-01
+    mean_CB_M800_mu_HP    8.3423e+02 +/-  8.16e-01
+      n1_CB_M800_mu_HP    2.1634e+01 +/-  1.41e+01
+      n2_CB_M800_mu_HP    1.5000e+01 +/-  8.41e+00
+   sigma_CB_M800_mu_HP    5.4889e+01 +/-  8.97e-01
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [559,1027] --> [559,1027]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [559,1027]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x5427000 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [728,910] --> [728,910]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=23527.3 FROM MIGRAD    STATUS=INITIATE      275 CALLS         276 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M800_el_HP   1.00001e+00   9.00000e-02   0.00000e+00   3.01038e+00
+   2  alpha2_CB_M800_el_HP   1.64000e+00   9.00000e-02   0.00000e+00   0.00000e+00
+   3  mean_CB_M800_el_HP   8.90000e+02   5.00000e+00   0.00000e+00   7.18452e+02
+   4  n1_CB_M800_el_HP   1.50000e+01   2.00000e+00   0.00000e+00   2.69039e+01
+   5  n2_CB_M800_el_HP   1.50000e+01   2.00000e+00   0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_el_HP   5.00000e+01   3.00000e+00   0.00000e+00  -5.68506e+02
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 4 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 34.6281 added to diagonal of error matrix
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 2
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter2
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=22719.4 FROM MIGRAD    STATUS=CONVERGED     510 CALLS         511 TOTAL
+                     EDM=4.52706e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M800_el_HP   1.00000e+00   2.06862e-01   1.52544e-01  -3.34912e-04
+   2  alpha2_CB_M800_el_HP   1.64000e+00   1.25224e-01  -0.00000e+00   0.00000e+00
+   3  mean_CB_M800_el_HP   8.37499e+02   1.10078e+00  -8.86416e-06  -4.40532e-05
+   4  n1_CB_M800_el_HP   1.27721e+01   1.27362e+01  -6.19769e-06   6.28774e-03
+   5  n2_CB_M800_el_HP   1.50000e+01   8.41471e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_el_HP   5.24881e+01   1.36212e+00  -3.05190e-04  -1.22318e-03
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.985e-06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  1.620e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  1.212e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  8.759e+02  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.000e+02  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.861e+00 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter2
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=22719.4 FROM HESSE     STATUS=FAILED          5 CALLS         516 TOTAL
+                     EDM=4.52706e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M800_el_HP   1.00000e+00   2.06862e-01   1.52544e-01  -1.56636e+00
+   2  alpha2_CB_M800_el_HP   1.42117e+00   2.09653e-01  -0.00000e+00   4.35895e-01
+   3  mean_CB_M800_el_HP   8.37499e+02   1.10078e+00  -8.86416e-06  -3.45617e+02
+   4  n1_CB_M800_el_HP   1.27721e+01   1.27362e+01  -6.19769e-06  -9.20011e+00
+   5  n2_CB_M800_el_HP   1.50000e+01   8.41471e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M800_el_HP   5.24881e+01   1.36212e+00  -3.05190e-04  -1.68250e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.985e-06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  1.620e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  1.212e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  8.759e+02  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.000e+02  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.861e+00 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 22719.4, estimated distance to minimum: 4.52706e-05
+                covariance matrix quality: Approximation only, not accurate
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M800_el_HP    1.0000e+00 +/-  2.07e-01
+  alpha2_CB_M800_el_HP    1.4212e+00 +/-  2.10e-01
+    mean_CB_M800_el_HP    8.3750e+02 +/-  1.10e+00
+      n1_CB_M800_el_HP    1.2772e+01 +/-  1.27e+01
+      n2_CB_M800_el_HP    1.5000e+01 +/-  8.41e+00
+   sigma_CB_M800_el_HP    5.2488e+01 +/-  1.36e+00
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [559,1053] --> [559,1053]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [559,1053]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x555cd60 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [1027,1365] --> [1027,1365]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=57739.8 FROM MIGRAD    STATUS=INITIATE      136 CALLS         137 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M1200_mu_HP   1.00003e+00   9.00000e-02   0.00000e+00   5.10468e+00
+   2  alpha2_CB_M1200_mu_HP   1.00009e+00   9.00000e-02   0.00000e+00   3.90803e+00
+   3  mean_CB_M1200_mu_HP   1.22183e+03   5.00000e+00   0.00000e+00   1.99614e+02
+   4  n1_CB_M1200_mu_HP   5.01269e+00   2.00000e+00   0.00000e+00  -1.40704e+01
+   5  n2_CB_M1200_mu_HP   5.01228e+00   2.00000e+00  -1.52124e+00   3.39378e+00
+   6  sigma_CB_M1200_mu_HP   5.00000e+01   3.00000e+00   0.00000e+00  -5.81790e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 5 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 2.20742 added to diagonal of error matrix
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=57330.7 FROM MIGRAD    STATUS=CONVERGED     246 CALLS         247 TOTAL
+                     EDM=7.47978e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M1200_mu_HP   1.00000e+00   2.83661e-03   1.88592e-02** at limit **
+   2  alpha2_CB_M1200_mu_HP   1.00000e+00   1.98195e-02   5.43106e-02** at limit **
+   3  mean_CB_M1200_mu_HP   1.22031e+03   1.04594e+00   3.03896e-03   6.65992e-02
+   4  n1_CB_M1200_mu_HP   5.00000e+00   1.54482e-01   3.01855e-02** at limit **
+   5  n2_CB_M1200_mu_HP   5.00000e+00   1.23147e+01   1.50816e-01** at limit **
+   6  sigma_CB_M1200_mu_HP   7.00000e+01   7.36247e-02   1.65738e-02** at limit **
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  5.386e-13 -9.565e-16 -5.546e-09 -6.187e-14 -8.798e-13 -2.149e-14 
+ -9.565e-16  4.300e-11  3.460e-07 -7.278e-13 -2.417e-10 -1.213e-12 
+ -5.546e-09  3.460e-07  1.094e+00 -3.506e-06  4.244e-04 -6.135e-07 
+ -6.187e-14 -7.278e-13 -3.506e-06  1.650e-07 -7.524e-10 -1.592e-11 
+ -8.798e-13 -2.417e-10  4.244e-04 -7.524e-10  2.514e-05 -1.505e-09 
+ -2.149e-14 -1.213e-12 -6.135e-07 -1.592e-11 -1.505e-09  8.934e-08 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00724   1.000 -0.000 -0.007 -0.000 -0.000 -0.000
+        2  0.05174  -0.000  1.000  0.050 -0.000 -0.007 -0.001
+        3  0.09632  -0.007  0.050  1.000 -0.008  0.081 -0.002
+        4  0.00826  -0.000 -0.000 -0.008  1.000 -0.000 -0.000
+        5  0.08174  -0.000 -0.007  0.081 -0.000  1.000 -0.001
+        6  0.00221  -0.000 -0.001 -0.002 -0.000 -0.001  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 5 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 2.26814 added to diagonal of error matrix
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=57330.7 FROM HESSE     STATUS=OK             40 CALLS         287 TOTAL
+                     EDM=7.35463e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M1200_mu_HP   1.00000e+00   2.83495e-03   3.77184e-03  -1.57081e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   2  alpha2_CB_M1200_mu_HP   1.00000e+00   1.97046e-02   1.08621e-02  -1.57085e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   3  mean_CB_M1200_mu_HP   1.22031e+03   1.04113e+00   1.21558e-04  -3.34280e-01
+   4  n1_CB_M1200_mu_HP   5.00000e+00   1.54106e-01   6.03709e-03  -1.57057e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   5  n2_CB_M1200_mu_HP   5.00000e+00   1.23006e+01   6.03263e-03  -1.57130e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   6  sigma_CB_M1200_mu_HP   7.00000e+01   7.35886e-02   3.31476e-03   1.57060e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  5.383e-13 -3.772e-17 -1.098e-09 -2.606e-15 -5.975e-15 -7.727e-16 
+ -3.772e-17  4.275e-11  6.898e-08 -3.048e-14 -1.632e-12 -4.342e-14 
+ -1.098e-09  6.898e-08  1.084e+00 -7.364e-07  1.461e-05 -1.021e-07 
+ -2.606e-15 -3.048e-14 -7.364e-07  1.646e-07 -5.510e-12 -6.110e-13 
+ -5.975e-15 -1.632e-12  1.461e-05 -5.510e-12  2.497e-05 -9.127e-12 
+ -7.727e-16 -4.342e-14 -1.021e-07 -6.110e-13 -9.127e-12  8.930e-08 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00144   1.000 -0.000 -0.001 -0.000 -0.000 -0.000
+        2  0.01013  -0.000  1.000  0.010 -0.000 -0.000 -0.000
+        3  0.01076  -0.001  0.010  1.000 -0.002  0.003 -0.000
+        4  0.00174  -0.000 -0.000 -0.002  1.000 -0.000 -0.000
+        5  0.00281  -0.000 -0.000  0.003 -0.000  1.000 -0.000
+        6  0.00033  -0.000 -0.000 -0.000 -0.000 -0.000  1.000
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 57330.7, estimated distance to minimum: 7.35463e-06
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M1200_mu_HP    1.0000e+00 +/-  2.83e-03
+  alpha2_CB_M1200_mu_HP    1.0000e+00 +/-  1.97e-02
+   mean_CB_M1200_mu_HP    1.2203e+03 +/-  1.04e+00
+     n1_CB_M1200_mu_HP    5.0000e+00 +/-  1.54e-01
+     n2_CB_M1200_mu_HP    5.0000e+00 +/-  1.23e+01
+  sigma_CB_M1200_mu_HP    7.0000e+01 +/-  7.36e-02
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [897,1547] --> [897,1547]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [897,1547]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x5561420 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [1079,1365] --> [1079,1365]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=40248.7 FROM MIGRAD    STATUS=INITIATE      141 CALLS         142 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M1200_el_HP   1.00000e+00   9.00000e-02   0.00000e+00  -8.69169e-01
+   2  alpha2_CB_M1200_el_HP   1.00006e+00   9.00000e-02   0.00000e+00   5.00272e-01
+   3  mean_CB_M1200_el_HP   1.24009e+03   5.00000e+00   0.00000e+00   4.89516e+02
+   4  n1_CB_M1200_el_HP   5.00009e+00   2.00000e+00   0.00000e+00  -4.87780e-01
+   5  n2_CB_M1200_el_HP   5.00881e+00   2.00000e+00  -1.61277e+00  -2.91561e-01
+   6  sigma_CB_M1200_el_HP   5.00000e+01   3.00000e+00   0.00000e+00  -2.81377e+02
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 5 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.3134 added to diagonal of error matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.16799 added to diagonal of error matrix
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=40064.1 FROM MIGRAD    STATUS=CONVERGED     571 CALLS         572 TOTAL
+                     EDM=9.3467e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M1200_el_HP   1.00000e+00   2.65877e-02   4.77032e-02  -1.18382e-02
+   2  alpha2_CB_M1200_el_HP   1.44216e+00   1.28177e-01   3.95839e-02  -3.00084e-02
+   3  mean_CB_M1200_el_HP   1.23521e+03   1.14939e+00   2.59483e-03  -6.30345e-02
+   4  n1_CB_M1200_el_HP   5.00000e+00   1.51075e+01   2.17847e-01** at limit **
+   5  n2_CB_M1200_el_HP   2.50000e+01   1.57984e+01   5.00000e-01   1.41121e-05
+   6  sigma_CB_M1200_el_HP   7.00000e+01   3.39525e-01   2.94610e-02** at limit **
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  4.824e-08  3.043e-08 -1.032e-05 -1.396e-09  1.748e-08 -4.704e-10 
+  3.043e-08  1.689e-02 -1.254e-02  4.425e-08 -7.334e-04  3.414e-07 
+ -1.032e-05 -1.254e-02  1.321e+00 -6.139e-05 -2.865e-03  1.287e-05 
+ -1.396e-09  4.425e-08 -6.139e-05  7.826e-08  9.406e-08 -3.024e-09 
+  1.748e-08 -7.334e-04 -2.865e-03  9.406e-08  3.422e-02  1.120e-07 
+ -4.704e-10  3.414e-07  1.287e-05 -3.024e-09  1.120e-07  1.016e-06 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.05148   1.000  0.001 -0.041 -0.023  0.000 -0.002
+        2  0.09106   0.001  1.000 -0.084  0.001 -0.031  0.003
+        3  0.21405  -0.041 -0.084  1.000 -0.191 -0.013  0.011
+        4  0.19410  -0.023  0.001 -0.191  1.000  0.002 -0.011
+        5  0.03452   0.000 -0.031 -0.013  0.002  1.000  0.001
+        6  0.01471  -0.002  0.003  0.011 -0.011  0.001  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=40064.1 FROM HESSE     STATUS=OK             44 CALLS         616 TOTAL
+                     EDM=9.38698e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M1200_el_HP   1.00000e+00   2.65923e-02   9.54065e-03  -1.57221e+00
+   2  alpha2_CB_M1200_el_HP   1.44216e+00   1.28287e-01   1.58335e-03  -3.12418e+00
+   3  mean_CB_M1200_el_HP   1.23521e+03   1.18592e+00   5.18965e-04  -7.99362e-02
+   4  n1_CB_M1200_el_HP   5.00000e+00   1.39257e+01   5.00000e-01  -1.57078e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   5  n2_CB_M1200_el_HP   2.50000e+01   1.49936e+01   2.00000e-02   1.57250e+00
+   6  sigma_CB_M1200_el_HP   7.00000e+01   3.39913e-01   5.89221e-03   1.57111e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  4.825e-08  6.596e-09 -1.269e-06 -2.885e-10  9.734e-11 -1.223e-11 
+  6.596e-09  1.692e-02 -1.481e-02  2.413e-07 -2.471e-05  9.455e-08 
+ -1.269e-06 -1.481e-02  1.407e+00 -8.692e-05 -1.450e-04  3.701e-06 
+ -2.885e-10  2.413e-07 -8.692e-05  5.661e-08  6.159e-09 -9.426e-10 
+  9.734e-11 -2.471e-05 -1.450e-04  6.159e-09  3.525e-02  1.081e-09 
+ -1.223e-11  9.455e-08  3.701e-06 -9.426e-10  1.081e-09  1.017e-06 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00885   1.000  0.000 -0.005 -0.006  0.000 -0.000
+        2  0.09872   0.000  1.000 -0.096  0.008 -0.001  0.001
+        3  0.32201  -0.005 -0.096  1.000 -0.308 -0.001  0.003
+        4  0.30890  -0.006  0.008 -0.308  1.000  0.000 -0.004
+        5  0.00126   0.000 -0.001 -0.001  0.000  1.000  0.000
+        6  0.00450  -0.000  0.001  0.003 -0.004  0.000  1.000
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 40064.1, estimated distance to minimum: 9.38698e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M1200_el_HP    1.0000e+00 +/-  2.66e-02
+  alpha2_CB_M1200_el_HP    1.4422e+00 +/-  1.28e-01
+   mean_CB_M1200_el_HP    1.2352e+03 +/-  1.19e+00
+     n1_CB_M1200_el_HP    5.0000e+00 +/-  1.39e+01
+     n2_CB_M1200_el_HP    2.5000e+01 +/-  1.50e+01
+  sigma_CB_M1200_el_HP    7.0000e+01 +/-  3.40e-01
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [923,1547] --> [923,1547]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [923,1547]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x558ae80 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [1755,2223] --> [1755,2223]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=66772.3 FROM MIGRAD    STATUS=INITIATE      279 CALLS         280 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M2000_mu_HP   5.07731e-01   2.50000e-01   0.00000e+00  -5.72674e-01
+   2  alpha2_CB_M2000_mu_HP   1.50000e+00   2.50000e-01   0.00000e+00   0.00000e+00
+   3  mean_CB_M2000_mu_HP   2.09000e+03   5.00000e+00   0.00000e+00   2.98822e+02
+   4  n1_CB_M2000_mu_HP   1.00000e+01   3.49900e+00   0.00000e+00  -8.69083e+00
+   5  n2_CB_M2000_mu_HP   2.00000e+01   3.49900e+00   0.00000e+00   0.00000e+00
+   6  sigma_CB_M2000_mu_HP   1.50000e+02   6.50000e+00   0.00000e+00   3.49843e+01
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 3 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 15.4753 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -7.8098e-02  1.1084e-01  1.0001e+00  1.0161e+00  1.8537e+00  2.0974e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.080195 TO DIAGONAL.
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=66048.3 FROM HESSE     STATUS=OK             52 CALLS         764 TOTAL
+                     EDM=0.00347086    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M2000_mu_HP   9.20074e-01   2.12306e-01   6.18284e-03   2.71817e-02
+   2  alpha2_CB_M2000_mu_HP   1.26373e+00   1.57491e-01   1.18425e-02  -2.36006e-01
+   3  mean_CB_M2000_mu_HP   2.01319e+03   5.10432e+00   4.67209e-03   1.17582e-01
+   4  n1_CB_M2000_mu_HP   3.37824e+01   2.20142e+01   5.00000e-01   1.39291e-02
+   5  n2_CB_M2000_mu_HP   3.21283e+01   1.88460e+01   5.00000e-01  -1.02918e-03
+   6  sigma_CB_M2000_mu_HP   1.10013e+02   6.00518e+01   1.48486e-01  -8.08133e-03
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=66048.3 FROM MIGRAD    STATUS=CONVERGED     822 CALLS         823 TOTAL
+                     EDM=0.00374535    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   4.3 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M2000_mu_HP   9.19453e-01   4.59447e-02  -0.00000e+00  -4.17219e-01
+   2  alpha2_CB_M2000_mu_HP   1.26509e+00   8.01075e-02  -0.00000e+00   1.58620e-01
+   3  mean_CB_M2000_mu_HP   2.01319e+03   1.78650e+00  -0.00000e+00   4.80631e-01
+   4  n1_CB_M2000_mu_HP   3.49512e+01   3.04541e+01  -0.00000e+00   3.43558e-03
+   5  n2_CB_M2000_mu_HP   3.38923e+01   2.92934e+01   0.00000e+00  -4.85723e-04
+   6  sigma_CB_M2000_mu_HP   1.10030e+02   1.10868e+01  -0.00000e+00   1.23166e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.113e-03  8.751e-04  4.761e-02  9.338e-02 -3.697e-01  4.604e-02 
+  8.751e-04  6.428e-03 -9.609e-03  1.290e-01 -1.630e+00  1.834e-02 
+  4.761e-02 -9.609e-03  3.193e+00  1.098e+00 -1.590e+01  1.001e+00 
+  9.338e-02  1.290e-01  1.098e+00  3.124e+01 -4.262e+01  3.598e+00 
+ -3.697e-01 -1.630e+00 -1.590e+01 -4.262e+01  1.021e+04 -7.569e+00 
+  4.604e-02  1.834e-02  1.001e+00  3.598e+00 -7.569e+00  1.402e+00 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.88332   1.000  0.237  0.580  0.363 -0.080  0.846
+        2  0.45008   0.237  1.000 -0.067  0.288 -0.201  0.193
+        3  0.62563   0.580 -0.067  1.000  0.110 -0.088  0.473
+        4  0.61401   0.363  0.288  0.110  1.000 -0.075  0.544
+        5  0.22944  -0.080 -0.201 -0.088 -0.075  1.000 -0.063
+        6  0.88560   0.846  0.193  0.473  0.544 -0.063  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.1998e-02  6.9920e-01  8.5578e-01  9.6870e-01  1.4870e+00  2.0113e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.024010 TO DIAGONAL.
+ FCN=66048.3 FROM HESSE     STATUS=NOT POSDEF     48 CALLS         871 TOTAL
+                     EDM=0.017494    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M2000_mu_HP   9.19453e-01   4.59058e-01   6.18106e-03   2.00335e+02
+   2  alpha2_CB_M2000_mu_HP   1.26509e+00   3.30895e-01   1.15234e-02   2.47344e+01
+   3  mean_CB_M2000_mu_HP   2.01319e+03   1.12776e+01   4.67293e-03  -1.15878e+03
+   4  n1_CB_M2000_mu_HP   3.49512e+01   2.34619e+01   5.00000e-01   1.64549e+00
+   5  n2_CB_M2000_mu_HP   3.38923e+01   2.95802e+01   5.00000e-01   1.21303e+00
+   6  sigma_CB_M2000_mu_HP   1.10030e+02   6.47246e+01   1.21537e-01  -3.92271e+01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.303e-01  1.563e-01  5.408e+00  6.310e-01  4.439e+01  6.414e+00 
+  1.563e-01  1.126e-01  3.652e+00  3.859e-01  2.942e+01  4.382e+00 
+  5.408e+00  3.652e+00  1.291e+02  1.350e+01  1.038e+03  1.508e+02 
+  6.310e-01  3.859e-01  1.350e+01  4.446e+01  1.095e+02  1.586e+01 
+  4.439e+01  2.942e+01  1.038e+03  1.095e+02  3.162e+04  1.245e+03 
+  6.414e+00  4.382e+00  1.508e+02  1.586e+01  1.245e+03  1.798e+02 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99776   1.000  0.970  0.992  0.197  0.520  0.997
+        2  0.97506   0.970  1.000  0.958  0.172  0.493  0.974
+        3  0.99242   0.992  0.958  1.000  0.178  0.514  0.990
+        4  0.33347   0.197  0.172  0.178  1.000  0.092  0.177
+        5  0.52845   0.520  0.493  0.514  0.092  1.000  0.522
+        6  0.99752   0.997  0.974  0.990  0.177  0.522  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 66048.3, estimated distance to minimum: 0.017494
+                covariance matrix quality: Full matrix, but forced positive-definite
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M2000_mu_HP    9.1945e-01 +/-  4.59e-01
+  alpha2_CB_M2000_mu_HP    1.2651e+00 +/-  3.31e-01
+   mean_CB_M2000_mu_HP    2.0132e+03 +/-  1.13e+01
+     n1_CB_M2000_mu_HP    3.4951e+01 +/-  2.35e+01
+     n2_CB_M2000_mu_HP    3.3892e+01 +/-  2.96e+01
+  sigma_CB_M2000_mu_HP    1.1003e+02 +/-  6.47e+01
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [1521,2457] --> [1521,2457]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [1521,2457]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x55ca390 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [1807,2223] --> [1807,2223]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=54692.3 FROM MIGRAD    STATUS=INITIATE      281 CALLS         282 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M2000_el_HP   8.67041e-01   2.50000e-01   0.00000e+00   2.09935e+01
+   2  alpha2_CB_M2000_el_HP   1.50000e+00   2.50000e-01   0.00000e+00   0.00000e+00
+   3  mean_CB_M2000_el_HP   2.09000e+03   5.00000e+00   0.00000e+00   3.13027e+02
+   4  n1_CB_M2000_el_HP   1.00000e+01   3.49900e+00   0.00000e+00  -1.29764e+00
+   5  n2_CB_M2000_el_HP   2.00000e+01   3.49900e+00   0.00000e+00   0.00000e+00
+   6  sigma_CB_M2000_el_HP   1.50000e+02   6.50000e+00   0.00000e+00  -1.59468e+01
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 3 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.18695 added to diagonal of error matrix
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 2
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 5
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter5
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=54155.8 FROM MIGRAD    STATUS=CONVERGED     609 CALLS         610 TOTAL
+                     EDM=5.89367e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M2000_el_HP   1.13445e+00   5.68326e-02   8.37880e-03  -5.78280e-02
+   2  alpha2_CB_M2000_el_HP   2.08523e+00   1.94245e+00   5.10000e-01  -1.58524e-01
+   3  mean_CB_M2000_el_HP   2.02716e+03   1.43840e+00   3.94389e-03   1.64781e-01
+   4  n1_CB_M2000_el_HP   3.48214e+01   1.77600e+01   5.00000e-01   9.94693e-04
+   5  n2_CB_M2000_el_HP   2.00000e+01   4.88126e+00  -0.00000e+00   0.00000e+00
+   6  sigma_CB_M2000_el_HP   1.10000e+02   2.70474e-01   9.23269e-04** at limit **
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.233e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  2.333e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  2.069e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  9.596e+02  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.449e+01  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.152e-06 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter5
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=54155.8 FROM HESSE     STATUS=FAILED         11 CALLS         621 TOTAL
+                     EDM=5.89367e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M2000_el_HP   1.13445e+00   5.68326e-02   8.37880e-03   2.25060e+01
+   2  alpha2_CB_M2000_el_HP   2.08523e+00   1.94245e+00   5.10000e-01  -6.01167e+00
+   3  mean_CB_M2000_el_HP   2.02716e+03   1.43840e+00   3.94389e-03   4.37667e+01
+   4  n1_CB_M2000_el_HP   3.48214e+01   1.77600e+01   5.00000e-01   1.71381e+00
+   5  n2_CB_M2000_el_HP   1.13928e+01   8.50607e+00  -0.00000e+00   1.43100e-01
+   6  sigma_CB_M2000_el_HP   1.10000e+02   2.70474e-01   9.23269e-04  -3.92702e+01
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.233e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  2.333e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  2.069e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  9.596e+02  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.449e+01  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.152e-06 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 54155.8, estimated distance to minimum: 5.89367e-05
+                covariance matrix quality: Approximation only, not accurate
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M2000_el_HP    1.1344e+00 +/-  5.68e-02
+  alpha2_CB_M2000_el_HP    2.0852e+00 +/-  1.94e+00
+   mean_CB_M2000_el_HP    2.0272e+03 +/-  1.44e+00
+     n1_CB_M2000_el_HP    3.4821e+01 +/-  1.78e+01
+     n2_CB_M2000_el_HP    1.1393e+01 +/-  8.51e+00
+  sigma_CB_M2000_el_HP    1.1000e+02 +/-  2.70e-01
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [1547,2457] --> [1547,2457]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [1547,2457]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x55c5f70 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [2613,3263] --> [2613,3263]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=66481.3 FROM MIGRAD    STATUS=INITIATE      104 CALLS         105 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M3000_mu_HP   8.88628e-01   2.50000e-01   5.39230e-01  -5.38737e+00
+   2  alpha2_CB_M3000_mu_HP   1.50000e+00   2.50000e-01   0.00000e+00  -1.09743e+00
+   3  mean_CB_M3000_mu_HP   3.03111e+03   5.00000e+00   0.00000e+00   2.21078e+02
+   4  n1_CB_M3000_mu_HP   1.00000e+01   3.49900e+00   0.00000e+00  -3.30008e+00
+   5  n2_CB_M3000_mu_HP   2.00000e+01   3.49900e+00   0.00000e+00  -2.38414e-03
+   6  sigma_CB_M3000_mu_HP   1.50000e+02   6.50000e+00   0.00000e+00   6.03968e+01
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=66436.9 FROM MIGRAD    STATUS=CONVERGED     365 CALLS         366 TOTAL
+                     EDM=9.63392e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.4 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M3000_mu_HP   8.89358e-01   3.10932e-02  -7.75478e-04  -5.95471e-01
+   2  alpha2_CB_M3000_mu_HP   2.38498e+00   7.69449e-01   1.32949e-02   0.00000e+00
+   3  mean_CB_M3000_mu_HP   3.01499e+03   2.19641e+00   8.09300e-04  -1.64115e-01
+   4  n1_CB_M3000_mu_HP   3.49433e+01   3.24610e+01   6.85965e-02  -4.04913e-03
+   5  n2_CB_M3000_mu_HP   2.35262e+01   2.15660e+01   4.41138e-02   0.00000e+00
+   6  sigma_CB_M3000_mu_HP   1.40602e+02   2.43463e+00  -1.69642e-03   7.25975e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  9.672e-04 -1.280e-02 -3.708e-02 -8.131e-02 -4.317e-01  4.561e-02 
+ -1.280e-02  7.347e-01  1.897e-01  4.549e+00  3.622e+01 -2.896e-01 
+ -3.708e-02  1.897e-01  4.827e+00  1.326e+00  7.707e+00 -2.061e+00 
+ -8.131e-02  4.549e+00  1.326e+00  2.917e+01  2.350e+02 -2.530e+00 
+ -4.317e-01  3.622e+01  7.707e+00  2.350e+02  6.464e+04 -1.466e+01 
+  4.561e-02 -2.896e-01 -2.061e+00 -2.530e+00 -1.466e+01  5.939e+00 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.79425   1.000 -0.480 -0.543 -0.484 -0.055  0.602
+        2  0.98497  -0.480  1.000  0.101  0.983  0.166 -0.139
+        3  0.57379  -0.543  0.101  1.000  0.112  0.014 -0.385
+        4  0.98461  -0.484  0.983  0.112  1.000  0.171 -0.192
+        5  0.17525  -0.055  0.166  0.014  0.171  1.000 -0.024
+        6  0.67651   0.602 -0.139 -0.385 -0.192 -0.024  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 2
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter2
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=66436.9 FROM HESSE     STATUS=FAILED          5 CALLS         371 TOTAL
+                     EDM=9.63392e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M3000_mu_HP   8.89358e-01   2.37738e-02   4.67600e-03  -7.59438e-01
+   2  alpha2_CB_M3000_mu_HP   1.79104e+00   1.55791e+00   1.32949e-02   5.32838e-01
+   3  mean_CB_M3000_mu_HP   3.01499e+03   1.81540e+00   8.09300e-04  -4.29882e-01
+   4  n1_CB_M3000_mu_HP   3.49433e+01   2.41405e+01   6.85965e-02   1.49025e+00
+   5  n2_CB_M3000_mu_HP   2.35262e+01   1.38222e+01   4.41138e-02   2.79024e+00
+   6  sigma_CB_M3000_mu_HP   1.40602e+02   1.91786e+00  -1.69642e-03  -5.84409e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  5.653e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  1.184e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  3.297e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  4.702e+01  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.698e+02  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  3.682e+00 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 66436.9, estimated distance to minimum: 9.63392e-05
+                covariance matrix quality: Approximation only, not accurate
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M3000_mu_HP    8.8936e-01 +/-  2.38e-02
+  alpha2_CB_M3000_mu_HP    1.7910e+00 +/-  1.56e+00
+   mean_CB_M3000_mu_HP    3.0150e+03 +/-  1.82e+00
+     n1_CB_M3000_mu_HP    3.4943e+01 +/-  2.41e+01
+     n2_CB_M3000_mu_HP    2.3526e+01 +/-  1.38e+01
+  sigma_CB_M3000_mu_HP    1.4060e+02 +/-  1.92e+00
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [2418,3666] --> [2418,3666]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooArgSet::checkForDup: ERROR argument with name m_w is already in this set
+[#0] ERROR:InputArguments -- RooArgSet::checkForDup: ERROR argument with name m_w is already in this set
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_MyPDF' created with bounds [2418,3666]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_fitted_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x55a83a0 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x562dab0 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0 from preexisting content.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(GENPROJ_[MyPDF_X_p1]_Norm[m_w]_denominator_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x559e150 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (MyPDF)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (p1)
+ **********
+ **   13 **MIGRAD         500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x5669f40 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=210761 FROM MIGRAD    STATUS=INITIATE        6 CALLS           7 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a0           0.00000e+00   2.00000e+00   2.01358e-01  -1.74925e+03
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=210752 FROM MIGRAD    STATUS=CONVERGED      19 CALLS          20 TOTAL
+                     EDM=2.90896e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a0           1.06883e-01   2.44653e-02   7.75283e-04  -6.97096e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  1    ERR DEF=0.5
+  5.986e-04 
+ **********
+ **   18 **HESSE         500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=210752 FROM HESSE     STATUS=OK              5 CALLS          25 TOTAL
+                     EDM=2.91005e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a0           1.06883e-01   2.44655e-02   3.10113e-05   1.06886e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  1    ERR DEF=0.5
+  5.986e-04 
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x5652900 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(model_pdf) ERROR: unrecognized command: name_model_pdf
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(model_pdf) ERROR: unrecognized command: MarkerColor
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x561f880 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0 from preexisting content.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(GENPROJ_[MyPDF_X_p1]_Norm[m_w]_denominator_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [2717,3315] --> [2717,3315]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=60496.9 FROM MIGRAD    STATUS=INITIATE      105 CALLS         106 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M3000_el_HP   1.00824e+00   2.50000e-01  -9.43071e-01  -1.33506e+01
+   2  alpha2_CB_M3000_el_HP   1.50000e+00   2.50000e-01  -0.00000e+00  -2.68286e+01
+   3  mean_CB_M3000_el_HP   3.02736e+03   5.00000e+00  -0.00000e+00   2.06686e+02
+   4  n1_CB_M3000_el_HP   1.00000e+01   3.49900e+00  -0.00000e+00   1.30404e-01
+   5  n2_CB_M3000_el_HP   2.00000e+01   3.49900e+00  -0.00000e+00  -2.77346e-01
+   6  sigma_CB_M3000_el_HP   1.50000e+02   6.50000e+00  -0.00000e+00   6.39813e+01
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 5
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter5
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=60464.7 FROM MIGRAD    STATUS=CONVERGED     253 CALLS         254 TOTAL
+                     EDM=0.00092272    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M3000_el_HP   1.04927e+00   5.01415e-02   8.17735e-03   6.44933e-02
+   2  alpha2_CB_M3000_el_HP   2.11703e+00   9.06234e-01   1.29621e-01  -8.74496e-02
+   3  mean_CB_M3000_el_HP   3.01470e+03   1.79778e+00   5.60646e-03   4.22229e-02
+   4  n1_CB_M3000_el_HP   3.43937e+01   2.83572e+01   5.00000e-01   2.15719e-03
+   5  n2_CB_M3000_el_HP   3.47244e+01   2.79011e+01   0.00000e+00   0.00000e+00
+   6  sigma_CB_M3000_el_HP   1.44673e+02   1.82358e+00   0.00000e+00  -2.89925e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.516e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  1.058e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  3.233e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  2.513e+03  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.449e+01  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  3.329e+00 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **   18 **HESSE        3000
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter5
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=60464.7 FROM HESSE     STATUS=FAILED         11 CALLS         265 TOTAL
+                     EDM=0.00092272    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M3000_el_HP   1.04927e+00   5.01415e-02   8.17735e-03  -2.54650e+00
+   2  alpha2_CB_M3000_el_HP   2.11703e+00   9.06234e-01   1.29621e-01   2.98017e-01
+   3  mean_CB_M3000_el_HP   3.01470e+03   1.79778e+00   5.60646e-03  -4.35259e-01
+   4  n1_CB_M3000_el_HP   3.43937e+01   2.83572e+01   5.00000e-01   1.83482e+00
+   5  n2_CB_M3000_el_HP   3.11337e+01   2.61057e+01   0.00000e+00   1.39307e+00
+   6  sigma_CB_M3000_el_HP   1.44673e+02   1.82358e+00   0.00000e+00   6.69153e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.516e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  1.058e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  3.233e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  2.513e+03  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.449e+01  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  3.329e+00 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000
+        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000
+        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000
+        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000
+        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 60464.7, estimated distance to minimum: 0.00092272
+                covariance matrix quality: Approximation only, not accurate
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M3000_el_HP    1.0493e+00 +/-  5.01e-02
+  alpha2_CB_M3000_el_HP    2.1170e+00 +/-  9.06e-01
+   mean_CB_M3000_el_HP    3.0147e+03 +/-  1.80e+00
+     n1_CB_M3000_el_HP    3.4394e+01 +/-  2.84e+01
+     n2_CB_M3000_el_HP    3.1134e+01 +/-  2.61e+01
+  sigma_CB_M3000_el_HP    1.4467e+02 +/-  1.82e+00
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [2496,3692] --> [2496,3692]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooArgSet::checkForDup: ERROR argument with name m_w is already in this set
+[#0] ERROR:InputArguments -- RooArgSet::checkForDup: ERROR argument with name m_w is already in this set
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_MyPDF' created with bounds [2496,3692]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_fitted_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x56789d0 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x568b310 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0 from preexisting content.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(GENPROJ_[MyPDF_X_p1]_Norm[m_w]_denominator_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x55ec6e0 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (MyPDF)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (p1)
+ **********
+ **   13 **MIGRAD         500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x55ec6e0 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=181942 FROM MIGRAD    STATUS=INITIATE        6 CALLS           7 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a0           0.00000e+00   2.00000e+00   2.01358e-01  -6.67657e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=181941 FROM MIGRAD    STATUS=CONVERGED      19 CALLS          20 TOTAL
+                     EDM=2.46968e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a0           4.67252e-02   2.62892e-02   7.74214e-04  -1.89033e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  1    ERR DEF=0.5
+  6.911e-04 
+ **********
+ **   18 **HESSE         500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=181941 FROM HESSE     STATUS=OK              5 CALLS          25 TOTAL
+                     EDM=2.4731e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a0           4.67252e-02   2.62894e-02   3.09686e-05   4.67254e-03
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  1    ERR DEF=0.5
+  6.911e-04 
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x56aab10 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 1 from preexisting content.
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(model_pdf) ERROR: unrecognized command: name_model_pdf
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(model_pdf) ERROR: unrecognized command: MarkerColor
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(MyPDF) creating new cache 0x5611d10 with pdf BW_fitted_CONV_DCB_fitted_CACHE_Obs[m_w] for nset () with code 0 from preexisting content.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(GENPROJ_[MyPDF_X_p1]_Norm[m_w]_denominator_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [3575,4485] --> [3575,4485]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=67766.1 FROM MIGRAD    STATUS=INITIATE      117 CALLS         118 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M4000_mu_HP   1.22457e+00   2.50000e-01   0.00000e+00   2.86131e+00
+   2  alpha2_CB_M4000_mu_HP   1.50000e+00   2.50000e-01   0.00000e+00  -9.37409e+01
+   3  mean_CB_M4000_mu_HP   4.01948e+03   5.00000e+00   0.00000e+00   1.30684e+02
+   4  n1_CB_M4000_mu_HP   5.11202e+00   3.49900e+00  -3.43827e-01  -3.75581e-02
+   5  n2_CB_M4000_mu_HP   2.00000e+01   3.49900e+00   0.00000e+00  -1.81695e+00
+   6  sigma_CB_M4000_mu_HP   2.00000e+02   9.00000e+00   0.00000e+00   1.56025e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=67706.6 FROM MIGRAD    STATUS=CONVERGED     631 CALLS         632 TOTAL
+                     EDM=5.31084e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M4000_mu_HP   9.62726e-01   5.12442e-02   6.02216e-03   6.48546e-02
+   2  alpha2_CB_M4000_mu_HP   1.59641e+00   9.76078e-02   1.13343e-02  -1.52054e-02
+   3  mean_CB_M4000_mu_HP   4.01743e+03   2.94419e+00   6.89612e-03  -8.15307e-02
+   4  n1_CB_M4000_mu_HP   3.49992e+01   1.78976e+01   5.00000e-01   2.48102e-04
+   5  n2_CB_M4000_mu_HP   3.49975e+01   2.94213e+01   5.00000e-01  -8.60887e-04
+   6  sigma_CB_M4000_mu_HP   1.75552e+02   3.18343e+00   8.22324e-03  -4.14343e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.628e-03  1.444e-03 -9.481e-02  1.208e-02 -5.188e-04  1.078e-01 
+  1.444e-03  9.547e-03 -1.075e-02  9.149e-04  1.190e-02  1.617e-01 
+ -9.481e-02 -1.075e-02  8.676e+00 -1.072e-01  9.403e-03 -4.796e+00 
+  1.208e-02  9.149e-04 -1.072e-01  9.504e-01 -3.261e-04  8.396e-02 
+ -5.188e-04  1.190e-02  9.403e-03 -3.261e-04  1.643e+00 -5.847e-02 
+  1.078e-01  1.617e-01 -4.796e+00  8.396e-02 -5.847e-02  1.015e+01 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.77314   1.000  0.288 -0.628  0.242 -0.008  0.660
+        2  0.59491   0.288  1.000 -0.037  0.010  0.095  0.519
+        3  0.68939  -0.628 -0.037  1.000 -0.037  0.002 -0.511
+        4  0.32261   0.242  0.010 -0.037  1.000 -0.000  0.027
+        5  0.12924  -0.008  0.095  0.002 -0.000  1.000 -0.014
+        6  0.77490   0.660  0.519 -0.511  0.027 -0.014  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=67706.6 FROM HESSE     STATUS=OK             54 CALLS         686 TOTAL
+                     EDM=5.09257e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M4000_mu_HP   9.62726e-01   4.97601e-02   2.40886e-04  -6.81320e-01
+   2  alpha2_CB_M4000_mu_HP   1.59641e+00   8.90807e-02   3.92317e-01  -1.23185e-01
+   3  mean_CB_M4000_mu_HP   4.01743e+03   2.93049e+00   2.75845e-04  -3.85583e-01
+   4  n1_CB_M4000_mu_HP   3.49992e+01   1.78972e+01   5.00000e-01   1.58010e+00
+   5  n2_CB_M4000_mu_HP   3.49975e+01   2.95734e+01   5.00000e-01   1.55385e+00
+   6  sigma_CB_M4000_mu_HP   1.75552e+02   2.96563e+00   3.28930e-04  -2.11522e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.478e-03  9.140e-04 -9.250e-02  1.188e-02 -2.522e-03  9.396e-02 
+  9.140e-04  7.949e-03 -1.054e-02  4.371e-04 -1.819e-03  1.078e-01 
+ -9.250e-02 -1.054e-02  8.596e+00 -9.935e-02  2.539e-02 -4.689e+00 
+  1.188e-02  4.371e-04 -9.935e-02  9.504e-01 -1.310e-03  6.482e-02 
+ -2.522e-03 -1.819e-03  2.539e-02 -1.310e-03  1.628e+00 -2.865e-01 
+  9.396e-02  1.078e-01 -4.689e+00  6.482e-02 -2.865e-01  8.808e+00 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.75723   1.000  0.206 -0.634  0.245 -0.040  0.636
+        2  0.46138   0.206  1.000 -0.040  0.005 -0.016  0.408
+        3  0.68582  -0.634 -0.040  1.000 -0.035  0.007 -0.539
+        4  0.32269   0.245  0.005 -0.035  1.000 -0.001  0.022
+        5  0.09016  -0.040 -0.016  0.007 -0.001  1.000 -0.076
+        6  0.73453   0.636  0.408 -0.539  0.022 -0.076  1.000
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 67706.6, estimated distance to minimum: 5.09257e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M4000_mu_HP    9.6273e-01 +/-  4.98e-02
+  alpha2_CB_M4000_mu_HP    1.5964e+00 +/-  8.91e-02
+   mean_CB_M4000_mu_HP    4.0174e+03 +/-  2.93e+00
+     n1_CB_M4000_mu_HP    3.4999e+01 +/-  1.79e+01
+     n2_CB_M4000_mu_HP    3.4997e+01 +/-  2.96e+01
+  sigma_CB_M4000_mu_HP    1.7555e+02 +/-  2.97e+00
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [3107,4901] --> [3107,4901]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [3107,4901]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x568d290 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh_narrow): fit range of variable m expanded to nearest bin boundaries: [3640,4498] --> [3640,4498]
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=63344.9 FROM MIGRAD    STATUS=INITIATE      121 CALLS         122 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M4000_el_HP   1.23511e+00   2.50000e-01   0.00000e+00   2.49146e+00
+   2  alpha2_CB_M4000_el_HP   1.50000e+00   2.50000e-01   0.00000e+00  -1.22129e+02
+   3  mean_CB_M4000_el_HP   4.03885e+03   5.00000e+00   0.00000e+00   3.05974e+02
+   4  n1_CB_M4000_el_HP   3.21721e+00   3.49900e+00  -5.12269e-01   2.49374e-01
+   5  n2_CB_M4000_el_HP   2.00000e+01   3.49900e+00   0.00000e+00  -2.17111e+00
+   6  sigma_CB_M4000_el_HP   2.00000e+02   9.00000e+00   0.00000e+00   2.17897e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=63185.5 FROM MIGRAD    STATUS=CONVERGED     551 CALLS         552 TOTAL
+                     EDM=9.57574e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  alpha1_CB_M4000_el_HP   9.75819e-01   8.81721e-02   7.42371e-03   1.13322e-01
+   2  alpha2_CB_M4000_el_HP   1.52117e+00   9.72544e-02   8.98963e-03  -2.85822e-02
+   3  mean_CB_M4000_el_HP   4.02114e+03   3.69027e+00   6.42548e-03   6.69365e-02
+   4  n1_CB_M4000_el_HP   3.49811e+01   1.96360e+01   5.00000e-01  -1.44094e-03
+   5  n2_CB_M4000_el_HP   3.49995e+01   3.49860e+01   5.00000e-01  -7.20372e-04
+   6  sigma_CB_M4000_el_HP   1.66518e+02   4.43562e+00   8.43825e-03  -5.77982e-03
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  7.795e-03  4.407e-03 -2.559e-01  6.137e-02 -1.604e-04 -3.208e-01 
+  4.407e-03  9.478e-03 -1.016e-01  1.872e-02  3.964e-03 -3.018e-01 
+ -2.559e-01 -1.016e-01  1.364e+01 -1.206e+00  9.167e-03  1.128e+01 
+  6.137e-02  1.872e-02 -1.206e+00  2.018e+01 -7.597e-04 -1.418e+00 
+ -1.604e-04  3.964e-03  9.167e-03 -7.597e-04  1.754e-01  7.805e-03 
+ -3.208e-01 -3.018e-01  1.128e+01 -1.418e+00  7.805e-03  1.975e+01 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.87848   1.000  0.513 -0.785  0.155 -0.004 -0.818
+        2  0.75657   0.513  1.000 -0.282  0.043  0.097 -0.697
+        3  0.82103  -0.785 -0.282  1.000 -0.073  0.006  0.687
+        4  0.19446   0.155  0.043 -0.073  1.000 -0.000 -0.071
+        5  0.14975  -0.004  0.097  0.006 -0.000  1.000  0.004
+        6  0.89364  -0.818 -0.697  0.687 -0.071  0.004  1.000
+ **********
+ **   18 **HESSE        3000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=63185.5 FROM HESSE     STATUS=OK             48 CALLS         600 TOTAL
+                     EDM=9.38898e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  alpha1_CB_M4000_el_HP   9.75819e-01   8.46478e-02   2.96948e-04  -6.67908e-01
+   2  alpha2_CB_M4000_el_HP   1.52117e+00   9.51039e-02   3.59585e-04  -1.84103e-01
+   3  mean_CB_M4000_el_HP   4.02114e+03   3.58586e+00   2.57019e-04  -3.19815e-01
+   4  n1_CB_M4000_el_HP   3.49811e+01   1.96431e+01   5.00000e-01   1.52426e+00
+   5  n2_CB_M4000_el_HP   3.49995e+01   3.49856e+01   5.00000e-01   1.56323e+00
+   6  sigma_CB_M4000_el_HP   1.66518e+02   4.25504e+00   3.37530e-04  -2.71837e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  7.183e-03  3.946e-03 -2.343e-01  5.860e-02 -3.042e-05 -2.898e-01 
+  3.946e-03  9.063e-03 -8.664e-02  1.657e-02  4.176e-03 -2.767e-01 
+ -2.343e-01 -8.664e-02  1.288e+01 -1.103e+00  5.164e-03  1.023e+01 
+  5.860e-02  1.657e-02 -1.103e+00  2.018e+01 -1.866e-04 -1.270e+00 
+ -3.042e-05  4.176e-03  5.164e-03 -1.866e-04  1.756e-01  6.861e-05 
+ -2.898e-01 -2.767e-01  1.023e+01 -1.270e+00  6.861e-05  1.817e+01 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.86735   1.000  0.489 -0.770  0.154 -0.001 -0.802
+        2  0.74349   0.489  1.000 -0.254  0.039  0.105 -0.682
+        3  0.80921  -0.770 -0.254  1.000 -0.068  0.003  0.669
+        4  0.19335   0.154  0.039 -0.068  1.000 -0.000 -0.066
+        5  0.15287  -0.001  0.105  0.003 -0.000  1.000  0.000
+        6  0.88379  -0.802 -0.682  0.669 -0.066  0.000  1.000
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+
+  RooFitResult: minimized FCN value: 63185.5, estimated distance to minimum: 9.38898e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MIGRAD=0 HESSE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  alpha1_CB_M4000_el_HP    9.7582e-01 +/-  8.46e-02
+  alpha2_CB_M4000_el_HP    1.5212e+00 +/-  9.51e-02
+   mean_CB_M4000_el_HP    4.0211e+03 +/-  3.59e+00
+     n1_CB_M4000_el_HP    3.4981e+01 +/-  1.96e+01
+     n2_CB_M4000_el_HP    3.4999e+01 +/-  3.50e+01
+  sigma_CB_M4000_el_HP    1.6652e+02 +/-  4.26e+00
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dh): fit range of variable m_w expanded to nearest bin boundaries: [3159,4823] --> [3159,4823]
+[#0] ERROR:InputArguments -- RooTreeData::plotOn(dh) ERROR: unrecognized command: name_dh
+[#0] ERROR:InputArguments -- RooAbsReal::plotOn(conv) ERROR: unrecognized command: name_model_pdf
+[#1] INFO:Eval -- RooRealVar::setRange(m_w) new range named 'refrange_fft_conv' created with bounds [3159,4823]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(BW_Int[m_w]) using numeric integrator RooIntegrator1D to calculate Int(m_w)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(conv) creating new cache 0x56b1fc0 with pdf BW_CONV_CB_fitted_CACHE_Obs[m_w] for nset (m_w) with code 0

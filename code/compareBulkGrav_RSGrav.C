@@ -32,10 +32,10 @@ namespace{
   int loadMyLibraryTrigger = loadMyLibraryTriggerFunc();
 }
 
-const char* input_filename1 = "/usr/users/dschaefer/root/results/Efficiency/histos/BulkGravToWKinematicsEl.root";
-const char* input_filename2 = "/usr/users/dschaefer/root/results/Efficiency/histos/BulkGravToWKinematicsMu.root";
-const char* input_filename3 = "/usr/users/dschaefer/root/results/Efficiency/histos/RSGravToWKinematicsEl.root";
-const char* input_filename4 = "/usr/users/dschaefer/root/results/Efficiency/histos/RSGravToWKinematicsMu.root";
+const char* input_filename1 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/BulkGravToWWKinematics_el_HP.root";
+const char* input_filename2 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/BulkGravToWWKinematics_mu_HP.root";
+const char* input_filename3 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/RSGravToWWKinematics_el_HP.root";
+const char* input_filename4 = "/storage/jbod/dschaefer/EfficiencyHistos/semileptonic/ToWW/RSGravToWWKinematics_mu_HP.root";
 TFile * BulkGravEl = new TFile(input_filename1,"READ");
 TFile * BulkGravMu = new TFile(input_filename2,"READ");
 TFile * RSGravEl = new TFile(input_filename3,"READ");

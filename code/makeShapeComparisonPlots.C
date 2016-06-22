@@ -48,7 +48,7 @@ namespace{
 void makeShapeComparisonPlots()
 {
   
-  string channel = "el";
+  string channel = "mu";
   string category = "HP";
   TLatex text;
   text.SetTextFont(43);
@@ -365,5 +365,6 @@ leg2->Draw();
  c_debug->cd(4);
  frame_debug3->Draw();
  
-  
+ getShapeFromInterpolation("wide","el",category,3500,0.05,x_new,frame4,-2); 
+ getShapeFromInterpolation("wide","mu",category,3500,0.05,x_new,frame4,-2);
 }

@@ -1,0 +1,484 @@
+
+
+ event : 1167
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 965.05 |eta| : 0.327017 ID tight : 1 pruned Mass : 72.2005 passed overlap : 1
+index : 1 pt : 716.972 |eta| : 0.0943523 ID tight : 1 pruned Mass : 35.4779 passed overlap : 1
+index : 2 pt : 322.883 |eta| : 1.24183 ID tight : 1 pruned Mass : 79.3253 passed overlap : 1
+ Delta Eta_jj : 0.914816 Mjj : 1249.56
+
+
+ event : 7477
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 657.156 |eta| : 0.91414 ID tight : 1 pruned Mass : 65.5829 passed overlap : 1
+index : 1 pt : 396.25 |eta| : 0.364614 ID tight : 1 pruned Mass : 77.8782 passed overlap : 1
+index : 2 pt : 339.766 |eta| : 3.13056 ID tight : 0 pruned Mass : 27.2954 passed overlap : 1
+ Delta Eta_jj : 1.27875 Mjj : 1248.71
+
+
+ event : 9002
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 1
+index : 0 pt : 778.018 |eta| : 0.357686 ID tight : 1 pruned Mass : 97.1704 passed overlap : 1
+index : 1 pt : 413.394 |eta| : 0.682656 ID tight : 1 pruned Mass : 79.6285 passed overlap : 1
+index : 2 pt : 246.116 |eta| : 3.0922 ID tight : 1 pruned Mass : 44.9023 passed overlap : 1
+ Delta Eta_jj : 1.04034 Mjj : 1291.64
+
+
+ event : 12787
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 707.348 |eta| : 0.0221636 ID tight : 1 pruned Mass : 69.472 passed overlap : 1
+index : 1 pt : 397.825 |eta| : 1.15526 ID tight : 1 pruned Mass : 26.1003 passed overlap : 1
+index : 2 pt : 382.222 |eta| : 1.14588 ID tight : 1 pruned Mass : 92.9359 passed overlap : 1
+ Delta Eta_jj : 1.12372 Mjj : 1213.11
+
+
+ event : 13749
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 1
+index : 0 pt : 809.822 |eta| : 0.563325 ID tight : 1 pruned Mass : 91.0809 passed overlap : 1
+index : 1 pt : 409.932 |eta| : 0.708507 ID tight : 1 pruned Mass : 85.4981 passed overlap : 1
+index : 2 pt : 397.538 |eta| : 0.0113482 ID tight : 1 pruned Mass : 11.7227 passed overlap : 1
+index : 3 pt : 181.553 |eta| : 0.379791 ID tight : 1 pruned Mass : 19.3179 passed overlap : 1
+ Delta Eta_jj : 1.27183 Mjj : 1373.56
+
+
+ event : 20434
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1070.37 |eta| : 0.28255 ID tight : 1 pruned Mass : 78.7009 passed overlap : 1
+index : 1 pt : 365.598 |eta| : 1.46591 ID tight : 1 pruned Mass : 38.7756 passed overlap : 1
+index : 2 pt : 332.905 |eta| : 0.00738162 ID tight : 1 pruned Mass : 67.1068 passed overlap : 1
+index : 3 pt : 257.516 |eta| : 2.10034 ID tight : 1 pruned Mass : 28.9605 passed overlap : 1
+ Delta Eta_jj : 0.275168 Mjj : 1220.77
+
+
+ event : 23244
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 955.659 |eta| : 0.26772 ID tight : 1 pruned Mass : 76.6395 passed overlap : 1
+index : 1 pt : 638.112 |eta| : 0.118415 ID tight : 1 pruned Mass : 5.74489 passed overlap : 1
+index : 2 pt : 392.565 |eta| : 1.3415 ID tight : 1 pruned Mass : 71.9812 passed overlap : 1
+index : 3 pt : 209.225 |eta| : 1.94888 ID tight : 1 pruned Mass : 30.4041 passed overlap : 1
+ Delta Eta_jj : 1.07378 Mjj : 1236.88
+
+
+ event : 28635
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 903.587 |eta| : 0.490821 ID tight : 1 pruned Mass : 74.9071 passed overlap : 1
+index : 1 pt : 525.764 |eta| : 0.642082 ID tight : 1 pruned Mass : 26.1448 passed overlap : 1
+index : 2 pt : 405.069 |eta| : 0.329585 ID tight : 1 pruned Mass : 82.8832 passed overlap : 1
+ Delta Eta_jj : 0.820406 Mjj : 1245.93
+
+
+ event : 6861
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 661.787 |eta| : 1.43162 ID tight : 1 pruned Mass : 80.6498 passed overlap : 1
+index : 1 pt : 456.317 |eta| : 0.190078 ID tight : 1 pruned Mass : 84.2915 passed overlap : 1
+index : 2 pt : 241.245 |eta| : 1.67344 ID tight : 1 pruned Mass : 54.2542 passed overlap : 1
+ Delta Eta_jj : 1.24154 Mjj : 1347.59
+
+
+ event : 6873
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 791.427 |eta| : 0.394 ID tight : 1 pruned Mass : 82.1446 passed overlap : 1
+index : 1 pt : 489.605 |eta| : 1.18069 ID tight : 1 pruned Mass : 25.8599 passed overlap : 1
+index : 2 pt : 329.987 |eta| : 0.756867 ID tight : 1 pruned Mass : 80.1992 passed overlap : 1
+ Delta Eta_jj : 1.15087 Mjj : 1212.55
+
+
+ event : 8790
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 939.528 |eta| : 0.122892 ID tight : 1 pruned Mass : 81.6362 passed overlap : 1
+index : 1 pt : 683.077 |eta| : 0.391361 ID tight : 1 pruned Mass : 52.3424 passed overlap : 1
+index : 2 pt : 421.853 |eta| : 0.411234 ID tight : 1 pruned Mass : 86.6609 passed overlap : 1
+ Delta Eta_jj : 0.534126 Mjj : 1274.76
+
+
+ event : 11241
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 1
+index : 0 pt : 833.132 |eta| : 0.279865 ID tight : 1 pruned Mass : 76.9179 passed overlap : 1
+index : 1 pt : 404.92 |eta| : 0.191001 ID tight : 1 pruned Mass : 74.3708 passed overlap : 1
+index : 2 pt : 243.518 |eta| : 0.672483 ID tight : 1 pruned Mass : 16.4694 passed overlap : 1
+ Delta Eta_jj : 0.470866 Mjj : 1210.06
+
+
+ event : 18631
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 646.918 |eta| : 0.411135 ID tight : 1 pruned Mass : 73.1999 passed overlap : 1
+index : 1 pt : 391.973 |eta| : 0.725111 ID tight : 1 pruned Mass : 97.0726 passed overlap : 1
+index : 2 pt : 193.838 |eta| : 0.965439 ID tight : 1 pruned Mass : 59.2341 passed overlap : 1
+ Delta Eta_jj : 1.13625 Mjj : 1186.09
+
+
+ event : 19254
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 727.22 |eta| : 0.0763484 ID tight : 1 pruned Mass : 77.9296 passed overlap : 1
+index : 1 pt : 426.199 |eta| : 1.14613 ID tight : 1 pruned Mass : 87.2975 passed overlap : 1
+ Delta Eta_jj : 1.06979 Mjj : 1295.05
+
+
+ event : 23628
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1232.28 |eta| : 0.579691 ID tight : 1 pruned Mass : 90.947 passed overlap : 1
+index : 1 pt : 902.621 |eta| : 1.46491 ID tight : 1 pruned Mass : 30.9623 passed overlap : 1
+index : 2 pt : 327.106 |eta| : 0.622894 ID tight : 1 pruned Mass : 81.8638 passed overlap : 1
+ Delta Eta_jj : 0.0432028 Mjj : 1242.92
+
+
+ event : 4524
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 971.191 |eta| : 0.332937 ID tight : 1 pruned Mass : 84.6883 passed overlap : 1
+index : 1 pt : 514.311 |eta| : 0.880249 ID tight : 1 pruned Mass : 27.9975 passed overlap : 1
+index : 2 pt : 455.792 |eta| : 0.81444 ID tight : 1 pruned Mass : 89.3137 passed overlap : 1
+ Delta Eta_jj : 0.481503 Mjj : 1351.29
+
+
+ event : 7095
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 840.511 |eta| : 0.908696 ID tight : 1 pruned Mass : 78.9119 passed overlap : 1
+index : 1 pt : 414.485 |eta| : 1.74839 ID tight : 1 pruned Mass : 85.3366 passed overlap : 1
+index : 2 pt : 305.221 |eta| : 0.909299 ID tight : 1 pruned Mass : 8.07572 passed overlap : 1
+ Delta Eta_jj : 0.839691 Mjj : 1290.11
+
+
+ event : 7897
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 821.627 |eta| : 0.201118 ID tight : 1 pruned Mass : 80.0189 passed overlap : 1
+index : 1 pt : 452.453 |eta| : 1.18257 ID tight : 1 pruned Mass : 100.617 passed overlap : 1
+index : 2 pt : 334.105 |eta| : 2.00683 ID tight : 1 pruned Mass : 20.9209 passed overlap : 1
+ Delta Eta_jj : 0.981452 Mjj : 1382.59
+
+
+ event : 24391
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 1
+index : 0 pt : 738.427 |eta| : 0.19253 ID tight : 1 pruned Mass : 86.8262 passed overlap : 1
+index : 1 pt : 415.567 |eta| : 0.858392 ID tight : 1 pruned Mass : 81.319 passed overlap : 1
+index : 2 pt : 342.157 |eta| : 0.230178 ID tight : 1 pruned Mass : 11.2341 passed overlap : 1
+ Delta Eta_jj : 1.05092 Mjj : 1282.56
+
+
+ event : 27050
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 819.231 |eta| : 1.01868 ID tight : 1 pruned Mass : 76.1508 passed overlap : 1
+index : 1 pt : 576.427 |eta| : 1.04526 ID tight : 1 pruned Mass : 18.0569 passed overlap : 1
+index : 2 pt : 388.382 |eta| : 0.170439 ID tight : 1 pruned Mass : 71.7653 passed overlap : 1
+ Delta Eta_jj : 0.848246 Mjj : 1231.24
+
+
+ event : 27219
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 950.136 |eta| : 0.924009 ID tight : 1 pruned Mass : 84.1366 passed overlap : 1
+index : 1 pt : 618.367 |eta| : 1.81939 ID tight : 1 pruned Mass : 11.5288 passed overlap : 1
+index : 2 pt : 411.007 |eta| : 0.708789 ID tight : 1 pruned Mass : 83.8571 passed overlap : 1
+index : 3 pt : 174.58 |eta| : 1.06682 ID tight : 1 pruned Mass : 35.8122 passed overlap : 1
+ Delta Eta_jj : 0.21522 Mjj : 1278.04
+
+
+ event : 28012
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 3 0
+index : 0 pt : 1379.54 |eta| : 0.338268 ID tight : 1 pruned Mass : 77.8362 passed overlap : 1
+index : 1 pt : 631.75 |eta| : 1.51554 ID tight : 1 pruned Mass : 10.3679 passed overlap : 1
+index : 2 pt : 621.917 |eta| : 0.0808537 ID tight : 1 pruned Mass : 16.0757 passed overlap : 1
+index : 3 pt : 348.141 |eta| : 0.685028 ID tight : 1 pruned Mass : 79.4277 passed overlap : 1
+index : 4 pt : 204.784 |eta| : 3.29912 ID tight : 0 pruned Mass : 17.9571 passed overlap : 1
+ Delta Eta_jj : 0.34676 Mjj : 1182.22
+
+
+ event : 28128
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 660.963 |eta| : 0.704988 ID tight : 1 pruned Mass : 74.6804 passed overlap : 1
+index : 1 pt : 374.496 |eta| : 0.58953 ID tight : 1 pruned Mass : 77.8355 passed overlap : 1
+index : 2 pt : 315.433 |eta| : 2.2136 ID tight : 1 pruned Mass : 18.764 passed overlap : 1
+index : 3 pt : 204.004 |eta| : 1.01845 ID tight : 1 pruned Mass : 32.3844 passed overlap : 1
+ Delta Eta_jj : 1.29452 Mjj : 1215.68
+
+
+ event : 14468
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 0
+index : 0 pt : 751.842 |eta| : 0.67615 ID tight : 1 pruned Mass : 74.8194 passed overlap : 1
+index : 1 pt : 404.941 |eta| : 0.453286 ID tight : 1 pruned Mass : 93.6801 passed overlap : 1
+index : 2 pt : 230.938 |eta| : 1.69072 ID tight : 1 pruned Mass : 14.8907 passed overlap : 1
+ Delta Eta_jj : 1.12944 Mjj : 1301.91
+
+
+ event : 27847
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1240.46 |eta| : 0.335724 ID tight : 1 pruned Mass : 70.0659 passed overlap : 1
+index : 1 pt : 925.1 |eta| : 2.07372 ID tight : 1 pruned Mass : 23.2832 passed overlap : 1
+index : 2 pt : 282.059 |eta| : 0.836582 ID tight : 1 pruned Mass : 86.8938 passed overlap : 1
+ Delta Eta_jj : 0.500858 Mjj : 1249.12
+
+
+ event : 26053
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1181.7 |eta| : 0.345446 ID tight : 1 pruned Mass : 88.7757 passed overlap : 1
+index : 1 pt : 1098.65 |eta| : 0.316068 ID tight : 1 pruned Mass : 60.6415 passed overlap : 1
+index : 2 pt : 421.442 |eta| : 1.18314 ID tight : 1 pruned Mass : 89.4771 passed overlap : 1
+ Delta Eta_jj : 0.83769 Mjj : 1315.09
+
+
+ event : 7340
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1676.93 |eta| : 0.0169936 ID tight : 1 pruned Mass : 83.892 passed overlap : 1
+index : 1 pt : 1533.47 |eta| : 0.498532 ID tight : 1 pruned Mass : 14.3144 passed overlap : 1
+index : 2 pt : 318.373 |eta| : 0.38371 ID tight : 1 pruned Mass : 77.5993 passed overlap : 1
+ Delta Eta_jj : 0.366716 Mjj : 1423.4
+
+
+ event : 18716
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1654.43 |eta| : 0.242302 ID tight : 1 pruned Mass : 83.4898 passed overlap : 1
+index : 1 pt : 1647.99 |eta| : 0.0464203 ID tight : 1 pruned Mass : 7.10573 passed overlap : 1
+index : 2 pt : 399.404 |eta| : 1.08338 ID tight : 1 pruned Mass : 82.8931 passed overlap : 1
+ Delta Eta_jj : 0.841083 Mjj : 1504.6
+
+
+ event : 1216
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1128.85 |eta| : 0.2308 ID tight : 1 pruned Mass : 70.9301 passed overlap : 1
+index : 1 pt : 808.731 |eta| : 1.01365 ID tight : 1 pruned Mass : 15.272 passed overlap : 1
+index : 2 pt : 414.595 |eta| : 0.864142 ID tight : 1 pruned Mass : 75.1812 passed overlap : 1
+ Delta Eta_jj : 0.633342 Mjj : 1454.22
+
+
+ event : 3368
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1144.01 |eta| : 0.622876 ID tight : 1 pruned Mass : 81.4113 passed overlap : 1
+index : 1 pt : 944.694 |eta| : 1.73353 ID tight : 1 pruned Mass : 5.80595 passed overlap : 1
+index : 2 pt : 392.008 |eta| : 0.346382 ID tight : 1 pruned Mass : 94.0555 passed overlap : 1
+ Delta Eta_jj : 0.969258 Mjj : 1425.22
+
+
+ event : 8964
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 1 2
+index : 0 pt : 1256.76 |eta| : 1.00695 ID tight : 1 pruned Mass : 66.2504 passed overlap : 1
+index : 1 pt : 955.169 |eta| : 0.547707 ID tight : 1 pruned Mass : 100.707 passed overlap : 1
+index : 2 pt : 433.389 |eta| : 0.716787 ID tight : 1 pruned Mass : 92.3447 passed overlap : 1
+ Delta Eta_jj : 1.26449 Mjj : 1068.64
+
+
+ event : 11551
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1619.21 |eta| : 0.845386 ID tight : 1 pruned Mass : 82.0178 passed overlap : 1
+index : 1 pt : 1399.65 |eta| : 0.804824 ID tight : 1 pruned Mass : 32.9776 passed overlap : 1
+index : 2 pt : 218.948 |eta| : 0.335968 ID tight : 1 pruned Mass : 79.6535 passed overlap : 1
+ Delta Eta_jj : 1.18135 Mjj : 1430.7
+
+
+ event : 17251
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 3
+index : 0 pt : 1569.08 |eta| : 0.496673 ID tight : 1 pruned Mass : 89.0078 passed overlap : 1
+index : 1 pt : 808.253 |eta| : 0.0398569 ID tight : 1 pruned Mass : 49.2969 passed overlap : 1
+index : 2 pt : 471.246 |eta| : 1.35611 ID tight : 1 pruned Mass : 9.76845 passed overlap : 1
+index : 3 pt : 321.707 |eta| : 0.813652 ID tight : 1 pruned Mass : 80.8824 passed overlap : 1
+ Delta Eta_jj : 0.316978 Mjj : 1348.83
+
+
+ event : 13826
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1033.76 |eta| : 0.00892498 ID tight : 1 pruned Mass : 78.3356 passed overlap : 1
+index : 1 pt : 685.858 |eta| : 0.553706 ID tight : 1 pruned Mass : 11.1126 passed overlap : 1
+index : 2 pt : 369.317 |eta| : 0.999094 ID tight : 1 pruned Mass : 86.3501 passed overlap : 1
+ Delta Eta_jj : 0.990169 Mjj : 1400.74
+
+
+ event : 20305
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 2
+index : 0 pt : 1478.49 |eta| : 0.555898 ID tight : 1 pruned Mass : 81.6511 passed overlap : 1
+index : 1 pt : 1007.05 |eta| : 0.68561 ID tight : 1 pruned Mass : 7.44132 passed overlap : 1
+index : 2 pt : 374.707 |eta| : 1.06021 ID tight : 1 pruned Mass : 80.4314 passed overlap : 1
+index : 3 pt : 340.784 |eta| : 0.619241 ID tight : 1 pruned Mass : 40.9788 passed overlap : 1
+ Delta Eta_jj : 0.504309 Mjj : 1476.25
+
+
+ event : 20729
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 3
+index : 0 pt : 1079.7 |eta| : 0.167606 ID tight : 1 pruned Mass : 87.043 passed overlap : 1
+index : 1 pt : 925.437 |eta| : 0.103946 ID tight : 1 pruned Mass : 15.2846 passed overlap : 1
+index : 2 pt : 392.54 |eta| : 0.0963855 ID tight : 1 pruned Mass : 33.4046 passed overlap : 1
+index : 3 pt : 354.661 |eta| : 1.21573 ID tight : 1 pruned Mass : 82.1556 passed overlap : 1
+ Delta Eta_jj : 1.04812 Mjj : 1414.04
+
+
+ event : 24284
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 0 3
+index : 0 pt : 1244.62 |eta| : 0.47223 ID tight : 1 pruned Mass : 92.4383 passed overlap : 1
+index : 1 pt : 540.948 |eta| : 0.213052 ID tight : 1 pruned Mass : 25.2827 passed overlap : 1
+index : 2 pt : 360.283 |eta| : 0.163788 ID tight : 1 pruned Mass : 69.9848 passed overlap : 1
+index : 3 pt : 313.609 |eta| : 1.186 ID tight : 1 pruned Mass : 74.3936 passed overlap : 1
+ Delta Eta_jj : 0.713771 Mjj : 1342.36
+
+
+ event : 24619
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 863.693 |eta| : 0.226928 ID tight : 1 pruned Mass : 72.7235 passed overlap : 1
+index : 1 pt : 503.057 |eta| : 0.967297 ID tight : 1 pruned Mass : 9.4804 passed overlap : 1
+index : 2 pt : 435.32 |eta| : 1.45125 ID tight : 1 pruned Mass : 98.1408 passed overlap : 1
+ Delta Eta_jj : 1.22432 Mjj : 1463.41
+
+
+ event : 25121
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1203.35 |eta| : 0.761506 ID tight : 1 pruned Mass : 78.4124 passed overlap : 1
+index : 1 pt : 1112.19 |eta| : 1.10522 ID tight : 1 pruned Mass : 10.6091 passed overlap : 1
+index : 2 pt : 435.448 |eta| : 0.102698 ID tight : 1 pruned Mass : 85.5519 passed overlap : 1
+ Delta Eta_jj : 0.864204 Mjj : 1456.37
+
+
+ event : 7581
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1293.53 |eta| : 0.0331522 ID tight : 1 pruned Mass : 77.8965 passed overlap : 1
+index : 1 pt : 940.222 |eta| : 1.20555 ID tight : 1 pruned Mass : 48.1243 passed overlap : 1
+index : 2 pt : 412.484 |eta| : 0.968578 ID tight : 1 pruned Mass : 85.3871 passed overlap : 1
+ Delta Eta_jj : 0.935426 Mjj : 1619.41
+
+
+ event : 232
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1588.81 |eta| : 0.673229 ID tight : 1 pruned Mass : 78.2649 passed overlap : 1
+index : 1 pt : 1304.79 |eta| : 0.788061 ID tight : 1 pruned Mass : 30.3942 passed overlap : 1
+index : 2 pt : 354.162 |eta| : 1.72226 ID tight : 1 pruned Mass : 88.4742 passed overlap : 1
+ Delta Eta_jj : 1.04903 Mjj : 1642.16
+
+
+ event : 2918
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1586.09 |eta| : 0.819661 ID tight : 1 pruned Mass : 82.4786 passed overlap : 1
+index : 1 pt : 1567.03 |eta| : 0.613033 ID tight : 1 pruned Mass : 23.6702 passed overlap : 1
+index : 2 pt : 383.061 |eta| : 0.0798733 ID tight : 1 pruned Mass : 83.9532 passed overlap : 1
+index : 3 pt : 375.055 |eta| : 0.013973 ID tight : 1 pruned Mass : 70.9009 passed overlap : 1
+ Delta Eta_jj : 0.739788 Mjj : 1681.33
+
+
+ event : 17350
+ passed preselections:  1 passed Delta Eta_jj : 1 passed Mjj : 1 passed pruned Mass cut : 1
+
+info about AK8 jets : 
+ jet Candidates indices : 2 0
+index : 0 pt : 1481.78 |eta| : 0.294325 ID tight : 1 pruned Mass : 69.9642 passed overlap : 1
+index : 1 pt : 1271.97 |eta| : 0.548925 ID tight : 1 pruned Mass : 20.7235 passed overlap : 1
+index : 2 pt : 405.446 |eta| : 0.241018 ID tight : 1 pruned Mass : 82.2559 passed overlap : 1
+ Delta Eta_jj : 0.535343 Mjj : 1594.25
